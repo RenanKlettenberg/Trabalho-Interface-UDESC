@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineDiary</title>
+
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="stylesheet" href="../css/sidebar.css">
+</head>
+<body>
+    <header>
+    <button class="open-btn" onclick="toggleMenu()">
+        <i class="ph ph-list"></i>
+    </button>
+    </header>
+    
+
+    <aside id="sidebar" class="sidebar">
+    <button class="open-btn" onclick="toggleMenu()">
+        <i class="ph ph-list"></i>
+    </button>
+
+        <div class="top">
+            <div class="logo">
+                <span class="cine">CINE</span><span class="diary">DIARY</span>
+            </div>
+
+            <nav class="menu">
+                <a href="#"><i class="ph ph-house"></i>Home</a>
+                <a href="#"><i class="ph ph-star"></i>Reviews</a>
+                <a href="#"><i class="ph ph-magnifying-glass"></i>Pesquisar</a>
+                <a href="perfil.html"><i class="ph ph-user"></i>Perfil</a>
+            </nav>
+        </div>
+
+        <div class="bottom-menu">
+            <a href="#"><i class="ph ph-gear"></i>Configurações</a>
+            <a href="#"><i class="ph ph-headset"></i>Ajuda / Suporte</a>
+        </div>
+
+    </aside>
+
+    <script src="../js/sidebar.js"></script>
+</body>
+</html>
