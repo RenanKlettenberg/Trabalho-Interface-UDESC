@@ -1,0 +1,68 @@
+#banner img {
+    width: 100%;
+
+}
+
+#banner {
+    position: relative;
+}
+
+.overlay-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #0B070D 20%, #0b070d65 40%, #0b070d00 100%);
+}
+
+.info-banner {
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.25rem;
+}
+
+#banner .info-banner img{
+    width: 25%;
+    border-radius: 20px;
+}
+
+
+.text-info-banner span{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.info-banner .text-info-banner p{
+    margin: 0;
+    font-size: 13px;
+    max-width: 85%;
+    transform: translateY(-5px);
+}
+
+#more-profile{
+    border: 1px solid white;
+    width: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    flex-grow: 20;
+}
+
+header .dropdown-menu .dropdown-item{
+    color: white;
+}
+
+header .dropdown-menu .dropdown-divider{
+    background: white;
+}
+
+header .dropdown-menu{
+    background-color: #0B070D;
+    color: white !important;
+}

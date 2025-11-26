@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>CineDiary</title>
 
-    <script src="https://unpkg.com/phosphor-icons"></script>
-    <link rel="stylesheet" href="../css/sidebar.css">
 </head>
+
 <body>
     <header>
-    <button class="open-btn" onclick="toggleMenu()">
-        <i class="ph ph-list"></i>
-    </button>
+        <button class="open-btn" onclick="toggleMenu()">
+            <i class="ph ph-list"></i>
+        </button>
     </header>
-    
 
     <aside id="sidebar" class="sidebar">
-    <button class="open-btn" onclick="toggleMenu()">
-        <i class="ph ph-list"></i>
-    </button>
+        <button class="open-btn" onclick="toggleMenu()">
+            <i class="ph ph-list"></i>
+        </button>
 
         <div class="top">
             <div class="logo">
@@ -41,6 +44,16 @@
 
     </aside>
 
+    <section id="aviso-portabilidade">
+        <h1>Atenção!</h1>
+        <span>Este projeto não tem intenção de ser compatível com dispositivos mairores de 576px!</span>
+    </section>
+
     <script src="../js/sidebar.js"></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1,24 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/perfil.css">
     <title>CineDiary</title>
+
 </head>
+
 <body>
-    <aside>
-        <!--Sidebar vem aqui-->
-    </aside>
     <header>
-        <!--Elementos que vão no topo-->
-        <i class="bi bi-list"></i>
+        <button class="open-btn" onclick="toggleMenu()">
+            <i class="ph ph-list"></i>
+        </button>
+        <div class="dropstart">
+            <a id="more-profile" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-three-dots"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Seguir</a></li>
+                <li><a class="dropdown-item" href="#">Compartilhar</a></li>
+                <li><a class="dropdown-item" href="#">Sobre a conta</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Denunciar</a></li>
+            </ul>
+        </div>
     </header>
+
+    <aside id="sidebar" class="sidebar">
+        <button class="open-btn" onclick="toggleMenu()">
+            <i class="ph ph-list"></i>
+        </button>
+
+        <div class="top">
+            <div class="logo">
+                <span class="cine">CINE</span><span class="diary">DIARY</span>
+            </div>
+
+            <nav class="menu">
+                <a href="#"><i class="ph ph-house"></i>Home</a>
+                <a href="#"><i class="ph ph-star"></i>Reviews</a>
+                <a href="#"><i class="ph ph-magnifying-glass"></i>Pesquisar</a>
+                <a href="perfil.html"><i class="ph ph-user"></i>Perfil</a>
+            </nav>
+        </div>
+
+        <div class="bottom-menu">
+            <a href="#"><i class="ph ph-gear"></i>Configurações</a>
+            <a href="#"><i class="ph ph-headset"></i>Ajuda / Suporte</a>
+        </div>
+
+    </aside>
+
     <main>
-        <!--Conteúdo principal, priorize usar <section> em vez <div>, quando for criar tags containers-->
+        <section id="banner">
+            <img src="../imgs/banner-perfil.png" alt="Banner do perfil">
+            <div class="overlay-banner"></div>
+            <div class="info-banner">
+                <img class="img-info-banner" src="../imgs/perfil.jpg" alt="Imagem de perfil">
+                <div class="text-info-banner">
+                    <span>Jason Maio</span>
+                    <p>Amante de filmes de terror, gosto de pãnico, hallowen entre outros...</p>
+                </div>
+            </div>
+        </section>
+
+        <nav>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                        type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                        type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="tab-content" id="myTabContent">
+            <section class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">...</section>
+            <section class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                tabindex="0">
+                ...</section>
+        </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <section id="aviso-portabilidade">
+        <h1>Atenção!</h1>
+        <span>Este projeto não tem intenção de ser compatível com dispositivos mairores de 576px!</span>
+    </section>
+
+    <script src="../js/sidebar.js"></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
