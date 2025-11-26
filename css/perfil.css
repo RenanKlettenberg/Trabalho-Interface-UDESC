@@ -66,3 +66,41 @@ header .dropdown-menu{
     background-color: #0B070D;
     color: white !important;
 }
+
+.nav-item{
+    flex-grow: 1;
+}
+
+.nav-item button{
+    width: 100%;
+    padding: 0;
+    color: white !important;
+    background: none !important;
+    border: none !important;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.nav-link.active{
+    border-bottom: 2px solid white !important;
+}
+
+.tab-content{
+    padding: 1.25rem;
+}
+
+.tab-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#select_filtro{
+    background-color: #0B070D;
+    color: white;
+    flex-shrink: 1;
+    width: fit-content;
+    font-size: 15px;
+    padding: .25rem 2.25rem .25rem .75rem;
+    border: 1px solid #5F3075;
+}

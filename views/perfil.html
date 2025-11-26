@@ -75,22 +75,48 @@
         <nav>
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
-                        type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+                    <button class="nav-link active" id="sobre-tab" data-bs-toggle="tab" data-bs-target="#tab-sobre-mim"
+                        type="button" role="tab" aria-controls="sobre-tab-pane" aria-selected="true">SOBRE MIM</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
-                        type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+                    <button class="nav-link" id="estatisticas-tab" data-bs-toggle="tab"
+                        data-bs-target="#tab-estatisticas" type="button" role="tab" aria-controls="tab-estatisticas"
+                        aria-selected="false">ESTATÍSTICAS</button>
                 </li>
             </ul>
         </nav>
 
-        <div class="tab-content" id="myTabContent">
-            <section class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
-                tabindex="0">...</section>
-            <section class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+        <div class="tab-content" id="tabs-content">
+            <section class="tab-pane fade show active" id="tab-sobre-mim" role="tabpanel"
+                aria-labelledby="tab-sobre-mim" tabindex="0">
+                <div class="tab-container">
+                    <section>
+                        <h6 class="titulo-secao">Filme favorito</h6>
+
+                    </section>
+
+                    <section>
+                        <h6 class="titulo-secao">Filmes em destaque</h6>
+
+                    </section>
+
+                    <section>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h6 class="titulo-secao mb-0">Lista de favoritos</h6>
+                            <select name="select_filtro" id="select_filtro" class="form-select">
+                                <option value="Todos">Todos</option>
+                                <option value="Filmes">Filmes</option>
+                                <option value="Séries">Séries</option>
+                            </select>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <section class="tab-pane fade" id="tab-estatisticas" role="tabpanel" aria-labelledby="tab-estatisticas"
                 tabindex="0">
-                ...</section>
+
+            </section>
         </div>
     </main>
 
