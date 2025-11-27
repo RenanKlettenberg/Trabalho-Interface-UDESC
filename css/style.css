@@ -173,3 +173,16 @@ header {
     display: flex;
     flex-direction: column;
 }
+
+/* -------------------- START REVIEW -------------------- */
+.star-review{
+    display: flex;
+    gap: .3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.bi-star-fill{
+    color: #FBE40E;
+    font-size: 1.1rem;
+}

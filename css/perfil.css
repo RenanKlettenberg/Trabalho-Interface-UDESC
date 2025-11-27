@@ -25,25 +25,25 @@
     padding: 1.25rem;
 }
 
-#banner .info-banner img{
+#banner .info-banner img {
     width: 25%;
     border-radius: 20px;
 }
 
 
-.text-info-banner span{
+.text-info-banner span {
     font-size: 30px;
     font-weight: bold;
 }
 
-.info-banner .text-info-banner p{
+.info-banner .text-info-banner p {
     margin: 0;
     font-size: 13px;
     max-width: 85%;
     transform: translateY(-5px);
 }
 
-#more-profile{
+#more-profile {
     border: 1px solid white;
     width: 1.8rem;
     display: flex;
@@ -54,24 +54,24 @@
     flex-grow: 20;
 }
 
-header .dropdown-menu .dropdown-item{
+header .dropdown-menu .dropdown-item {
     color: white;
 }
 
-header .dropdown-menu .dropdown-divider{
+header .dropdown-menu .dropdown-divider {
     background: white;
 }
 
-header .dropdown-menu{
+header .dropdown-menu {
     background-color: #0B070D;
     color: white !important;
 }
 
-.nav-item{
+.nav-item {
     flex-grow: 1;
 }
 
-.nav-item button{
+.nav-item button {
     width: 100%;
     padding: 0;
     color: white !important;
@@ -81,21 +81,22 @@ header .dropdown-menu{
     font-weight: bold;
 }
 
-.nav-link.active{
+.nav-link.active {
     border-bottom: 2px solid white !important;
 }
 
-.tab-content{
+.tab-content {
     padding: 1.25rem;
 }
 
-.tab-container{
+.tab-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding-top: 1rem;
 }
 
-#select_filtro{
+#select_filtro {
     background-color: #0B070D;
     color: white;
     flex-shrink: 1;
@@ -103,4 +104,77 @@ header .dropdown-menu{
     font-size: 15px;
     padding: .25rem 2.25rem .25rem .75rem;
     border: 1px solid #5F3075;
+}
+
+.badge{
+    background-color: #5F3075;   
+}
+
+.bi-star-fill{
+    color: #BA3CF4 !important;
+}
+/*Filme favorito-------------------*/
+.favorito-container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.favorito-container img {
+    width: 33%;
+    height: 100%
+}
+
+.favorito-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.favorito-info h6 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: .1rem;
+}
+
+.favorito-info p{
+    font-size: 0.85rem;
+    max-height: 4rem;
+    overflow: hidden;
+    text-align: justify;
+    font-weight: light;
+    margin-bottom: .5rem;
+}
+
+.favoritos-data{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.favoritos-data .badge i{
+    margin-right: .4rem;
+    font-size: 1rem;
+}
+
+.favoritos-data .badge{
+    display: flex;
+    align-items: center;
+    padding-right: .8rem;
+    padding-left: .5rem;
+    font-weight: 400;
+}
+
+/*Filmes em destaque----------------*/
+#section-destaque img{
+    width: 100%;
+    border-radius: 15px;
+    margin-top: .25rem;
+}
+
+.destaques-titulo-filme{
+    font-size: .75rem;
+    text-align: center;
+    margin-top: .75rem;
 }

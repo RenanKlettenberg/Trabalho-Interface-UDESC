@@ -92,15 +92,67 @@
                 <div class="tab-container">
                     <section>
                         <h6 class="titulo-secao">Filme favorito</h6>
-
+                        <div class="favorito-container">
+                            <img src="../imgs/capa-sexta-feira-13.jpg" alt="Filme favorito">
+                            <div class="favorito-info">
+                                <h6>Friday 13th</h6>
+                                <p>Cinco anos após o massacre no acampamento Crystal Lake, um novo grupo de jovens chega
+                                    à região...
+                                </p>
+                                <div class="favoritos-data">
+                                    <span class="badge rounded-pill"><i class="bi bi-person-fill"></i>10,2 mi</span>
+                                    <div class="star-review">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </section>
 
-                    <section>
+                    <section id="section-destaque">
                         <h6 class="titulo-secao">Filmes em destaque</h6>
-
+                        <div class="row">
+                            <div class="col">
+                                <div class="star-review">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <img src="../imgs/capa-panico.jpg" alt="Capa filme pânico">
+                                <h6 class="destaques-titulo-filme">Pânico</h6>
+                            </div>
+                            <div class="col">
+                                <div class="star-review">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <img src="../imgs/capa-hora-do-pesadelo.jpg" alt="Capa filme pânico">
+                                <h6 class="destaques-titulo-filme">Hora do pesadelo</h6>
+                            </div>
+                            <div class="col">
+                                <div class="star-review">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <img src="../imgs/capa-hallowen.jpg" alt="Capa filme pânico">
+                                <h6 class="destaques-titulo-filme">Hallowen</h6>
+                            </div>
+                        </div>
                     </section>
 
-                    <section>
+                    <section id="section-lista">
                         <div class="d-flex justify-content-between align-items-center">
                             <h6 class="titulo-secao mb-0">Lista de favoritos</h6>
                             <select name="select_filtro" id="select_filtro" class="form-select">
@@ -109,13 +161,73 @@
                                 <option value="Séries">Séries</option>
                             </select>
                         </div>
+                        <ul>
+                            <li>
+                                <span class="posicao-lista">1</span>
+                                <div class="list-card">
+                                    <img src="../imgs/capa-sexta-feira-13.jpg" alt="Capa do filme">
+                                    <div class="list-cart-content">
+                                        <div class="upper-content">
+                                            <div class="list-card-header">
+                                                <h5 class="filme-lista-nome"></h5>
+                                                <hr>
+                                                <div class="tags-filme">
+                                                    <span class="badge rounded-pill">Terror</span>
+                                                    <span class="badge rounded-pill">Horror</span>
+                                                    <span class="badge rounded-pill">Suspense</span>
+                                                </div>
+                                            </div>
+                                            <div class="list-card-producao">
+                                                <span>Produção: <a href="#">Steve Miner</a></span>
+                                                <span>Direção: <a href="#">Steve Miner</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="lower-content">
+                                            <div class="list-card-data">
+                                                <span><i class="bi bi-person-fill"></i>426.034 usuários</span>
+                                                <span><i class="bi bi-calendar"></i>Estreia 25 Jan 2025</span>
+                                            </div>
+                                            <div class="list-card-review">
+                                                <div class="star-review">
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </section>
                 </div>
             </section>
 
             <section class="tab-pane fade" id="tab-estatisticas" role="tabpanel" aria-labelledby="tab-estatisticas"
                 tabindex="0">
+                <div class="tab-container">
+                    <section>
 
+                    </section>
+
+                    <section>
+                        <h6 class="titulo-secao">Suas preferências</h6>
+
+                    </section>
+
+                    <section>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h6 class="titulo-secao mb-0">Contribuições pra lista</h6>
+                            <select name="select_filtro" id="select_filtro" class="form-select">
+                                <option value="Todos">Recente</option>
+                                <option value="Filmes">Último ano</option>
+                                <option value="Séries">Todas</option>
+                            </select>
+                        </div>
+                    </section>
+                </div>
             </section>
         </div>
     </main>
