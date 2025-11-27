@@ -178,3 +178,93 @@ header .dropdown-menu {
     text-align: center;
     margin-top: .75rem;
 }
+
+/*Lista de favoritos----------------*/
+#section-lista ul{
+    list-style: none;
+    padding: 0;
+}
+
+.posicao-lista{
+    font-size: 8rem;
+    font-weight: bold;
+    color: #BA3CF4;
+}
+
+#section-lista li{
+    position: relative;
+}
+
+.list-card{
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 90%;
+    background-color: rgb(186, 60, 244,15%);
+    display: flex;
+    gap: 1rem;
+    padding: .5rem;
+    border-radius: 12px;
+}
+
+.list-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.list-card img{
+    width: 25%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.list-card-header{
+    padding-top: .5rem;
+}
+
+.filme-lista-nome{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.list-card hr{
+    color: #BA3CF4;
+    margin: .35rem 0 .25rem 0;
+}
+
+.tags-filme{
+    display: flex;
+    gap: .25rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.tags-filme span{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.lower-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.list-card-data{
+    display: flex;
+    flex-direction: column;
+    font-size: .6rem;
+}
+
+.list-card-data span{
+    display: flex;
+    align-items: center;
+}
+
+.list-card-data i{
+    font-size: .8rem !important;
+    margin-right: .3rem;
+}

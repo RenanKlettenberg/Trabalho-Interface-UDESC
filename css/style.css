@@ -186,3 +186,7 @@ header {
     color: #FBE40E;
     font-size: 1.1rem;
 }
+
+.bi-star-fill.no-star{
+    color: #AFAEA7 !important
+}
