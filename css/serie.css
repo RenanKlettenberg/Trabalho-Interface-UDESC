@@ -3,6 +3,10 @@
 
 }
 
+small{
+    font-size: 13px;
+}
+
 button{
     cursor: pointer;
     border: none;
@@ -158,3 +162,73 @@ h6{
 .plataformas::-webkit-scrollbar {
     display: none;
 }
+
+.elenco{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.elencos::-webkit-scrollbar {
+    display: none;
+}
+
+.ator img{
+    width: 70px;
+    height: 94px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.nomeAtor{
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.nomePersonagem{
+    font-size: 13px;
+    width: 100%
+}
+
+.review{
+    background-color: #5f307544;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.review img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.review p{
+    font-size: 15px;
+    margin: 0px;
+}
+
+.topo{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.escrita{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+#reviews{
+    align-items: right;
+    justify-content: end;
+}
+
+
+
+

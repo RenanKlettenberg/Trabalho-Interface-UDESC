@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/episodio.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>CineDiary</title>
+</head>
+<body>
+    <header>
+        <button class="open-btn" onclick="toggleMenu()">
+            <i class="ph ph-list"></i>
+        </button>
+    </header>
+    <aside id="sidebar" class="sidebar">
+        <button class="open-btn" onclick="toggleMenu()">
+            <i class="ph ph-list"></i>
+        </button>
+
+        <div class="top">
+            <div class="logo">
+                <span class="cine">CINE</span><span class="diary">DIARY</span>
+            </div>
+
+            <nav class="menu">
+                <a href="#"><i class="ph ph-house"></i>Home</a>
+                <a href="#"><i class="ph ph-star"></i>Reviews</a>
+                <a href="#"><i class="ph ph-magnifying-glass"></i>Pesquisar</a>
+                <a href="perfil.html"><i class="ph ph-user"></i>Perfil</a>
+            </nav>
+        </div>
+
+        <div class="bottom-menu">
+            <a href="#"><i class="ph ph-gear"></i>Configurações</a>
+            <a href="#"><i class="ph ph-headset"></i>Ajuda / Suporte</a>
+        </div>
+
+    </aside>
+    <section id="banner">
+            <img src="../imgs/ep1.png" alt="Banner do perfil">
+            <div class="overlay-banner"></div>
+            <div class="info-banner">
+                <img class="img-info-banner" src="../imgs/theRookieProfile.png" alt="Imagem de perfil">
+                <div class="text-info-banner">
+                    <span>T01 - E01</span>
+                    <p>Piloto</p>
+                </div>
+            </div>
+    </section>
+    <nav>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="sobre-tab" data-bs-toggle="tab" data-bs-target="#tab-sobre-mim"
+                        type="button" role="tab" aria-controls="sobre-tab-pane" aria-selected="true">DETALHES</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="estatisticas-tab" data-bs-toggle="tab"
+                        data-bs-target="#tab-estatisticas" type="button" role="tab" aria-controls="tab-estatisticas"
+                        aria-selected="false">COMENTÁRIOS</button>
+                </li>
+            </ul>
+    </nav>
+    
+    <div class="content">
+        <section class="detalhes">
+            <div class="informacoes">
+                <div class="star-review">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                </div>
+                <h6>Informações do episódio</h6>
+                <p>Na série The Rookie, John Nolan (Nathan Fillion) está realmente nadando contra a corrente. Enquanto as pessoas da sua idade estão no auge da carreira e já possuem uma rotina definida, Nolan se arrisca na cidade grande com um único objetivo: realizar o sonho de se tornar um policial no Departamento de Polícia de Los Angeles (LAPD). Como o calouro mais velho da turma, ele encara todos os desafios dessa perigosa carreira, afinal, é sua chance de recomeçar a vida e realizar seu desejo. Na série, ele e seus parceiros enfrentam desafios diários e, juntos, somam forças na delegacia.</p>
+            </div>
+            <h6>Personagens favoritos do público</h6>
+            <div class="personagens">
+                <div class="personagem">
+                    <img src="../imgs/nathan-fillion.png" alt="Foto do ator Nathan Fillion">
+                    <span class="nomeAtor">John Nolan</span>
+                    <small class="nomePersonagem">Nathan Fillion</small>
+                </div>
+                <div class="personagem">
+                    <img src="../imgs/melissa.png" alt="Foto da atriz Melissa O'Neil">
+                    <span class="nomeAtor">Lucy Chen</span>
+                    <small class="nomePersonagem">Melissa O'Neil</small>
+                </div>
+                <div class="personagem">
+                    <img src="../imgs/mekia.png" alt="Foto da atriz Mekia Cox">
+                    <span class="nomeAtor">Nylah Harper</span>
+                    <small class="nomePersonagem">Mekia Cox</small>
+                </div>
+                <div class="personagem">
+                    <img src="../imgs/alyssa.png" alt="Foto da atriz Alyssa Diaz">
+                    <span class="nomeAtor">Angela Lopez</span>
+                    <small class="nomePersonagem">Alyssa Diaz</small>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <section id="aviso-portabilidade">
+        <h1>Atenção!</h1>
+        <span>Este projeto não tem intenção de ser compatível com dispositivos mairores de 576px!</span>
+    </section>
+
+    <script src="../js/sidebar.js"></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>

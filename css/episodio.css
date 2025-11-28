@@ -1,0 +1,122 @@
+#banner img {
+    width: 100%;
+
+}
+
+small{
+    font-size: 13px;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+}
+
+#banner {
+    position: relative;
+}
+
+.overlay-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #0B070D 20%, #0b070d65 40%, #0b070d00 100%);
+}
+
+.info-banner {
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 1.25rem;
+}
+
+#banner .info-banner img {
+    width: 25%;
+    border-radius: 20px;
+}
+
+.text-info-banner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center; 
+    justify-content: center;
+}
+
+
+.text-info-banner span {
+    font-size: 30px;
+    font-weight: bold;
+    align-items: center;
+    width: 100%;
+}
+
+.info-banner .text-info-banner p {
+    margin: 0;
+    font-size: 13px;
+    text-align: center;
+    transform: translateY(-5px);
+    align-items: center;
+}
+
+.nav-item {
+    flex-grow: 1;
+}
+
+.nav-item button {
+    width: 100%;
+    padding: 0;
+    color: white !important;
+    background: none !important;
+    border: none !important;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid white !important;
+}
+
+.content{
+    padding:20px;
+}
+
+.personagens{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.personagens::-webkit-scrollbar {
+    display: none;
+}
+
+.personagem img{
+    width: 70px;
+    height: 94px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.nomeAtor{
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.nomePersonagem{
+    font-size: 13px;
+    width: 100%
+}
+
+p{
+    text-align: justify;
+}
+
+
+
