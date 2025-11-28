@@ -86,7 +86,7 @@ header .dropdown-menu {
 }
 
 .tab-content {
-    padding: 1.25rem;
+    padding: 1rem;
 }
 
 .tab-container {
@@ -106,13 +106,14 @@ header .dropdown-menu {
     border: 1px solid #5F3075;
 }
 
-.badge{
-    background-color: #5F3075;   
+.badge {
+    background-color: #5F3075;
 }
 
-.bi-star-fill{
+.bi-star-fill {
     color: #BA3CF4 !important;
 }
+
 /*Filme favorito-------------------*/
 .favorito-container {
     display: flex;
@@ -138,7 +139,7 @@ header .dropdown-menu {
     margin-bottom: .1rem;
 }
 
-.favorito-info p{
+.favorito-info p {
     font-size: 0.85rem;
     max-height: 4rem;
     overflow: hidden;
@@ -147,18 +148,18 @@ header .dropdown-menu {
     margin-bottom: .5rem;
 }
 
-.favoritos-data{
+.favoritos-data {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.favoritos-data .badge i{
+.favoritos-data .badge i {
     margin-right: .4rem;
     font-size: 1rem;
 }
 
-.favoritos-data .badge{
+.favoritos-data .badge {
     display: flex;
     align-items: center;
     padding-right: .8rem;
@@ -167,104 +168,232 @@ header .dropdown-menu {
 }
 
 /*Filmes em destaque----------------*/
-#section-destaque img{
+#section-destaque img {
     width: 100%;
     border-radius: 15px;
     margin-top: .25rem;
 }
 
-.destaques-titulo-filme{
+.destaques-titulo-filme {
     font-size: .75rem;
     text-align: center;
     margin-top: .75rem;
 }
 
 /*Lista de favoritos----------------*/
-#section-lista ul{
-    list-style: none;
-    padding: 0;
-}
-
-.posicao-lista{
+.posicao-lista {
+    display: flex;
+    align-items: center;
     font-size: 8rem;
     font-weight: bold;
-    color: #BA3CF4;
+    color: #C89BDC;
+    position: absolute;
+    top: 2%;
+    left: -4%;
+    height: 100%;
+    z-index: -5;
 }
 
-#section-lista li{
+#section-lista li:nth-of-type(1) .posicao-lista {
+    color: #BA3CF4 !important;
+}
+
+#section-lista li:nth-of-type(2) .posicao-lista {
+    color: #BC5BE6 !important;
+}
+
+#section-lista li:nth-of-type(3) .posicao-lista {
+    color: #BD71DF !important;
+}
+
+#section-lista li {
     position: relative;
 }
 
-.list-card{
-    position: absolute;
-    top: 10%;
-    right: 0;
+.list-card {
     width: 90%;
-    background-color: rgb(186, 60, 244,15%);
+    background-color: rgb(186, 60, 244, 10%);
     display: flex;
     gap: 1rem;
     padding: .5rem;
     border-radius: 12px;
 }
 
-.list-card-content{
+.list-card-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
 }
 
-.list-card img{
+.list-card img {
     width: 25%;
     height: 100%;
     border-radius: 12px;
 }
 
-.list-card-header{
+.list-card-header {
     padding-top: .5rem;
 }
 
-.filme-lista-nome{
+.filme-lista-nome {
     font-size: 1rem;
     font-weight: 600;
     margin: 0;
 }
 
-.list-card hr{
+.list-card hr {
     color: #BA3CF4;
     margin: .35rem 0 .25rem 0;
 }
 
-.tags-filme{
+.tags-filme {
     display: flex;
     gap: .25rem;
     width: 100%;
     flex-wrap: wrap;
 }
 
-.tags-filme span{
+.tags-filme span {
     font-size: 12px;
     font-weight: 400;
 }
 
-.lower-content{
+.lower-content {
     display: flex;
     justify-content: space-between;
     align-items: end;
 }
 
-.list-card-data{
+.list-card-data {
     display: flex;
     flex-direction: column;
     font-size: .6rem;
 }
 
-.list-card-data span{
+.list-card-data span {
     display: flex;
     align-items: center;
 }
 
-.list-card-data i{
+.list-card-data i {
     font-size: .8rem !important;
     margin-right: .3rem;
+}
+
+#section-lista ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+#section-lista li {
+    height: 200px;
+    display: flex;
+    justify-content: end;
+    height: fit-content;
+}
+
+@media (min-width: 450px) {
+    .list-card {
+        width: 94.2%;
+    }
+}
+
+/*Estatisticas-----------------------------------------------------*/
+
+/*Seção dados--------------------------*/
+/*Horas-----------*/
+#section-dados {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.horas>div,
+.notas>div {
+    background-color: #271D2C;
+    border-radius: 15px;
+    text-align: center;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+    font-size: .75rem;
+}
+
+.horas,
+.notas {
+    display: flex;
+    gap: 1rem;
+}
+
+.hora {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    transform: translateY(-5px);
+}
+
+.horas-numero {
+    font-size: 2rem;
+    color: #BA3CF4;
+    transform: translateY(5px);
+}
+
+.medidas {
+    display: flex;
+    font-weight: 300;
+    transform: translateY(-5px);
+}
+
+.medida {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.medidas .valor {
+    display: inline-block;
+    transform: translateY(5px);
+    color: #BA3CF4;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/*Notas-----------*/
+.notas>div{
+    padding: .75rem .5rem;
+}
+
+.notas-titulo {
+    font-size: 1rem;
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+}
+
+.media span {
+    font-size: .65rem;
+    font-weight: 300;
+}
+
+.notas .media:nth-child(3) .star-review .bi {
+    color: yellow !important
+}
+
+@media (min-width: 400px) {
+    .media span {
+        font-size: .75rem;
+    }
+
+    .notas .star-review{
+        font-size: 1rem;
+    }
 }

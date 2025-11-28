@@ -184,9 +184,15 @@ header {
 
 .bi-star-fill{
     color: #FBE40E;
-    font-size: 1.1rem;
+    font-size: .9em;
 }
 
 .bi-star-fill.no-star{
     color: #AFAEA7 !important
+}
+
+@media (max-width: 384px){
+    .bi-star-fill{
+        font-size: .75rem !important;
+    }
 }
