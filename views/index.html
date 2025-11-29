@@ -1,59 +1,250 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>CineDiary</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineDiary</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
-    <header>
-        <button class="open-btn" onclick="toggleMenu()">
-            <i class="ph ph-list"></i>
-        </button>
-    </header>
+  <aside id="sidebar" class="sidebar">
+    <button class="open-btn" onclick="toggleMenu()">
+      <i class="bi bi-list"></i>
+    </button>
 
-    <aside id="sidebar" class="sidebar">
-        <button class="open-btn" onclick="toggleMenu()">
-            <i class="ph ph-list"></i>
-        </button>
+    <div class="top">
+      <div class="logo">
+        <span class="cine">CINE</span><span class="diary">DIARY</span>
+      </div>
 
-        <div class="top">
-            <div class="logo">
-                <span class="cine">CINE</span><span class="diary">DIARY</span>
+      <nav class="menu">
+        <a href="#"><i class="bi bi-house"></i>Home</a>
+        <a href="#"><i class="bi bi-star"></i>Reviews</a>
+        <a href="#"><i class="bi bi-search"></i>Pesquisar</a>
+        <a href="#"><i class="bi bi-person"></i>Perfil</a>
+      </nav>
+    </div>
+
+    <div class="bottom-menu">
+      <a href="#"><i class="bi bi-gear"></i>Configurações</a>
+      <a href="#"><i class="bi bi-headset"></i>Ajuda / Suporte</a>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+  <header>
+    <i class="bi bi-list open-btn" onclick="toggleMenu()"></i>
+    <img src="../imgs/CineDiary.png" alt="CineDiary" class="logo-img">
+  </header>
+
+  <main>
+    <section class="main-banner">
+        <div class="banner-container">
+            <img src="../imgs/duna.png" alt="Duna Parte Dois" class="banner-img">
+
+            <div class="banner-content">
+              <div class="banner-info">
+                  <i class="bi bi-star-fill"></i>
+                  <span class="rating">4,5/5</span>
+                  <span class="genre">Sci-Fi</span>
+                  <span class="year">2025</span>
+              </div>
+
+              <div class="banner-buttons">
+                  <button class="banner-btn">
+                  <i class="bi bi-play-fill"></i> Assistir Trailer
+                  </button>
+                  <button class="banner-btn">
+                  <i class="bi bi-chat-left-text"></i> Comentários
+                  </button>
+              </div>
             </div>
-
-            <nav class="menu">
-                <a href="#"><i class="ph ph-house"></i>Home</a>
-                <a href="#"><i class="ph ph-star"></i>Reviews</a>
-                <a href="#"><i class="ph ph-magnifying-glass"></i>Pesquisar</a>
-                <a href="perfil.html"><i class="ph ph-user"></i>Perfil</a>
-            </nav>
         </div>
-
-        <div class="bottom-menu">
-            <a href="#"><i class="ph ph-gear"></i>Configurações</a>
-            <a href="#"><i class="ph ph-headset"></i>Ajuda / Suporte</a>
-        </div>
-
-    </aside>
-
-    <section id="aviso-portabilidade">
-        <h1>Atenção!</h1>
-        <span>Este projeto não tem intenção de ser compatível com dispositivos mairores de 576px!</span>
     </section>
 
-    <script src="../js/sidebar.js"></script>
-    <script src="https://unpkg.com/phosphor-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-</body>
+    <!-- Tendências -->
+    <section class="trending mt-4">
+      <h3><i class="bi bi-graph-up"></i> Tendências esta semana</h3>
 
+      <div class="trending-row">
+        <div class="trend-card">
+          <img src="../imgs/frankestein.png" alt="Frankenstein">
+          <h6>Frankenstein</h6>
+          <div class="star-review">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+          </div>
+        </div>
+
+        <div class="trend-card">
+          <img src="../imgs/pluribus.png" alt="Pluribus">
+          <h6>Pluribus</h6>
+          <div class="star-review">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+
+        <div class="trend-card">
+          <img src="../imgs/stranger-things.png" alt="Stranger Things">
+          <h6>Stranger Things</h6>
+          <div class="star-review">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  Top 10 Filmes  -->
+    <section class="top10 mt-4">
+      <h3><i class="bi bi-film"></i> Top 10 em filmes hoje</h3>
+
+      <div class="top10-row">
+        <div class="top10-card rank1"><span class="ranking-number">1</span><img src="../imgs/wicked.png" alt="Wicked"></div>
+        <div class="top10-card rank2"><span class="ranking-number">2</span><img src="../imgs/frankestein.png" alt="Frankenstein"></div>
+        <div class="top10-card rank3"><span class="ranking-number">3</span><img src="../imgs/uma-batalha-apos-a-outra.png" alt="Uma Batalha Após a Outra"></div>
+        <div class="top10-card rank4"><span class="ranking-number">4</span><img src="../imgs/o-filho-de-mil-homens.png" alt="O Filho de Mil Homens"></div>
+        <div class="top10-card rank5"><span class="ranking-number">5</span><img src="../imgs/depois-da-caçada.png" alt="Depois da Caçada"></div>
+        <div class="top10-card rank6"><span class="ranking-number">6</span><img src="../imgs/sonhos-de-trem.png" alt="Sonhos de Trem"></div>
+        <div class="top10-card rank7"><span class="ranking-number">7</span><img src="../imgs/quarteto-fantastico.png" alt="Quarteto Fantástico"></div>
+        <div class="top10-card rank8"><span class="ranking-number">8</span><img src="../imgs/a-hora-do-mal.png" alt="A Hora do Mal"></div>
+        <div class="top10-card rank9"><span class="ranking-number">9</span><img src="../imgs/a-grande-mentira.png" alt="A Grande Mentira"></div>
+        <div class="top10-card rank10"><span class="ranking-number">10</span><img src="../imgs/eden.png" alt="Eden"></div>
+      </div>
+    </section>
+
+    <!--  Top 10 Séries  -->
+    <section class="top10 mt-4">
+      <h3><i class="bi bi-tv"></i> Top 10 em séries hoje</h3>
+
+      <div class="top10-row">
+        <div class="top10-card rank1"><span class="ranking-number">1</span><img src="../imgs/stranger-things.png" alt="Wicked"></div>
+        <div class="top10-card rank2"><span class="ranking-number">2</span><img src="../imgs/pluribus.png" alt="Frankenstein"></div>
+        <div class="top10-card rank3"><span class="ranking-number">3</span><img src="../imgs/the-rookie.png" alt="The Rookie"></div>
+        <div class="top10-card rank4"><span class="ranking-number">4</span><img src="../imgs/stranger-things.png" alt="Stranger Things"></div>
+        <div class="top10-card rank5"><span class="ranking-number">5</span><img src="../imgs/monstro-historia.png" alt="Monstro: A História de Ed Gein"></div>
+        <div class="top10-card rank6"><span class="ranking-number">6</span><img src="../imgs/ninguem-nos-viu-partir.png" alt="Ninguém nos Viu Partir"></div>
+        <div class="top10-card rank7"><span class="ranking-number">7</span><img src="../imgs/berco-de-ouro.png" alt="Berço de Ouro"></div>
+        <div class="top10-card rank8"><span class="ranking-number">8</span><img src="../imgs/romanticos-anonimos.png" alt="Românticos Anônimos"></div>
+        <div class="top10-card rank9"><span class="ranking-number">9</span><img src="../imgs/lazarus.png" alt="Lazarus"></div>
+        <div class="top10-card rank10"><span class="ranking-number">10</span><img src="../imgs/tremembe.png" alt="Tremembé: A Prisão dos Famosos"></div>
+      </div>
+
+    </section>
+
+    <!--  Últimas Opiniões  -->
+    <section class="reviews mt-4">
+      <h3><i class="bi bi-chat-left-dots"></i> Últimas Opiniões</h3>
+
+      <div class="review-card">
+        <div class="review-left">
+          <img src="../imgs/pluribus.png" alt="Pluribus" class="review-img">
+          <div class="review-content">
+            <h5>Pluribus <span>2025</span></h5>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+            <p>Uma distopia cerebral e visualmente deslumbrante. Pluribus te fisga com seu mistério inicial e entrega uma reflexão profunda sobre individualidade e controle.</p>
+          </div>
+        </div>
+
+        <div class="review-right">
+          <div class="reviewer">
+            <span>Avaliador</span>
+            <div class="reviewer-photo"></div>
+          </div>
+          <i class="bi bi-heart"></i>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-left">
+          <img src="../imgs/frankestein.png" alt="Frankenstein" class="review-img">
+          <div class="review-content">
+            <h5>Frankenstein <span>2025</span></h5>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <p>A versão de Guillermo del Toro para Frankenstein é uma obra-prima gótica moderna.</p>
+          </div>
+        </div>
+
+        <div class="review-right">
+          <div class="reviewer">
+            <span>Avaliador</span>
+            <div class="reviewer-photo"></div>
+          </div>
+          <i class="bi bi-heart"></i>
+        </div>
+      </div>
+
+    </section>
+
+    <!--  Trailers Recentes  -->
+    <section class="trailers mt-4 mb-5">
+      <h3><i class="bi bi-play-circle"></i> Trailers recentes</h3>
+
+      <div class="trailer-card">
+        <div class="trailer-video">
+          <iframe
+            src="https://www.youtube.com/embed/Wb3kaP580kA"
+            title="Trailer Oficial"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="trailer-info">
+          <p class="release-date">
+            <i class="bi bi-calendar-event"></i>
+            Estreia Nov 26, 2025
+          </p>
+          <p class="trailer-title"><b>Stranger Things</b></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="aviso-portabilidade">
+    <h1>Atenção!</h1>
+    <span>Este projeto não tem intenção de ser compatível com dispositivos mairores de 576px!</span>
+  </section>
+
+  <script src="../js/sidebar.js"></script>
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  <script>
+    document.querySelectorAll('.review-card i.bi-heart').forEach(icon => {
+        icon.addEventListener('click', () => {
+        icon.classList.toggle('liked');
+        icon.classList.toggle('bi-heart-fill'); 
+        icon.classList.toggle('bi-heart');      
+      });
+    });
+  </script>
+</body>
 </html>
