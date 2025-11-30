@@ -218,11 +218,19 @@
         </div>
 
         <div class="trailer-info">
-          <p class="release-date">
-            <i class="bi bi-calendar-event"></i>
-            Estreia Nov 26, 2025
-          </p>
-          <p class="trailer-title"><b>Stranger Things</b></p>
+          <div class="trailer-meta">
+            <button class="add-list-btn">
+              <i class="bi bi-bookmark-plus"></i>
+            </button>
+
+            <div class="trailer-texts">
+              <p class="release-date">
+                <i class="bi bi-calendar-event"></i>
+                Estreia Nov 26, 2025
+              </p>
+              <p class="trailer-title"><b>Stranger Things</b></p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -238,6 +246,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
   <script>
+    
     document.querySelectorAll('.review-card i.bi-heart').forEach(icon => {
         icon.addEventListener('click', () => {
         icon.classList.toggle('liked');
@@ -245,6 +254,16 @@
         icon.classList.toggle('bi-heart');      
       });
     });
+
+    document.querySelectorAll('.add-list-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const icon = btn.querySelector('i');
+        icon.classList.toggle('bi-bookmark-plus');
+        icon.classList.toggle('bi-bookmark-check');
+      });
+    });
+
   </script>
 </body>
 </html>

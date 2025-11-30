@@ -383,7 +383,7 @@ section h3 i {
 }
 
 .release-date i {
-  color: #b04dff;
+  color: #BA3CF4;
   font-size: 16px;
 }
 
@@ -406,6 +406,46 @@ section h3 i {
 #aviso-portabilidade {
   padding-top: 5rem;
   display: none;
+}
+
+.trailer-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.add-list-btn {
+  background: none;
+  border: none;
+  font-size: 40px; 
+  cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+  padding: 0;
+  line-height: 1;
+  margin-top: 5px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-list-btn i {
+  color: #BA3CF4 !important; 
+  transition: color 0.25s ease;
+}
+
+.add-list-btn.active i {
+  color: #BA3CF4 !important;
+}
+
+.add-list-btn.active {
+  animation: pop 0.35s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.35); }
+  60% { transform: scale(0.9); }
+  100% { transform: scale(1); }
 }
 
 /* -------------------- TENDÊNCIAS ESTA SEMANA -------------------- */
@@ -700,12 +740,29 @@ section h3 i {
 @media (max-width: 576px) {
   
   .top10-card {
-    flex: 0 0 42%; 
+    position: relative;
+    flex: 0 0 40%;
+    aspect-ratio: 2 / 3;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .top10-card img {
+    width: 105%;
+    height: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+    z-index: 2;
+    transform: translateX(20px); /* 🔹 move o card levemente pra direita */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    transition: transform 0.25s ease;
   }
   
   .top10-card:hover img {
-    transform: scale(1.05);
-    z-index: 5;
+    transform: translateX(20px) scale(1.05); /* mantém o deslocamento no hover */
   }
 
   .ranking-number {
@@ -719,11 +776,11 @@ section h3 i {
     padding-bottom: 25px;
     padding-left: 90px;
     scroll-padding-left: 90px;
-    gap: 85px; 
+    gap: 115px; 
   }
   
   .top10-card.rank1 .ranking-number {
-    left: -90px; 
+    left: -60px;
   }
 
   .star-review .bi-star-fill, .star-review .bi-star-half, .star-review .bi-star, .review-content .stars i {
