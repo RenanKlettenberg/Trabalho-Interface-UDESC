@@ -1,0 +1,873 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0B070D;
+}
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  background: transparent;
+  z-index: 10;
+}
+
+header .bi-list {
+  position: absolute;
+  left: 1rem;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 55px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* -------------------- HAMBURGUER -------------------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 210px;
+  height: 100dvh;
+  background: #222222;
+  padding: 35px 25px;
+  transform: translateX(-100%);
+  transition: 0.35s ease;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.open-btn {
+  height: 37px;
+  z-index: 300;
+  border: none;
+  background: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.sidebar .open-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.sidebar.active .open-btn {
+  position: absolute;
+  right: 10px;
+  left: auto;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 150;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cine {
+  color: #ffffff;
+}
+
+.diary {
+  color: #b04dff;
+  margin-left: 22px;
+  margin-top: -7px;
+}
+
+.menu a, .bottom-menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 10px;
+  margin: 5px 0;
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+  border-radius: 5px;
+}
+
+.menu a i, .bottom-menu a i {
+  font-size: 16px;
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover, .bottom-menu a:hover {
+  background-color: rgba(176, 77, 255, 0.15);
+  transform: translateX(3px);
+}
+
+.menu a:hover i, .bottom-menu a:hover i {
+  color: #b04dff;
+}
+
+.bottom-menu {
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+
+.top {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------- BANNER PRINCIPAL -------------------- */
+.main-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+.banner-container {
+  position: relative;
+  width: 95%;
+  border-radius: 75px;
+  overflow: hidden;
+  box-shadow:
+    inset 0px -90px 160px rgba(0, 0, 0, 0.9),
+    inset 0px 60px 120px rgba(0, 0, 0, 0.6);
+}
+
+.banner-img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  display: block;
+  border-radius: 75px;
+}
+
+.banner-content {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: white;
+  z-index: 2;
+}
+
+.banner-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.8);
+  margin-left: 30px;
+}
+
+.banner-info i {
+  color: #b04dff;
+  font-size: 22px;
+}
+
+.banner-info .rating {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.banner-info .genre, .banner-info .year {
+  font-size: 15px;
+}
+
+.banner-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.banner-btn {
+  background-color: rgba(200, 155, 220, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 26px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  backdrop-filter: blur(6px);
+  transition: 0.25s ease;
+}
+
+.banner-btn i {
+  font-size: 20px;
+}
+
+.banner-btn:hover {
+  background-color: rgba(200, 155, 220, 0.55);
+  transform: scale(1.04);
+}
+
+section {
+  margin-top: 1.8rem;
+}
+
+section h3 {
+  font-size: 16px;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+}
+
+section h3 i {
+  color: #b04dff;
+  font-size: 16px;
+}
+
+/* -------------------- Últimas Opiniões -------------------- */
+.reviews {
+  margin-top: 2rem;
+}
+
+.review-card {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+  background: #1b1b1b;
+  padding: .8rem;
+  border-radius: 10px;
+}
+
+.review-img {
+  width: 60px;
+  height: 80px;
+  background: #333;
+  border-radius: 5px;
+}
+
+.review-content h5 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.review-content span {
+  color: #bbb;
+  font-size: 12px;
+}
+
+.stars i {
+  color: #b04dff;
+  font-size: 12px;
+}
+
+.review-content p {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #ccc;
+}
+
+/* -------------------- TRAILERS RECENTES -------------------- */
+.trailers {
+  padding: 0 18px;
+  margin-top: 2.5rem;
+}
+
+.trailers h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+
+.trailers h3 i {
+  color: #b04dff;
+  font-size: 24px;
+}
+
+.trailer-card {
+  background: rgba(200, 155, 220, 0.15); /* 💜 translúcido */
+  border-radius: 18px;
+  padding: 20px 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trailer-video {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.trailer-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 14px;
+}
+
+/* ===== Info abaixo do vídeo ===== */
+.trailer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 6px;
+}
+
+.release-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #ddd;
+  margin: 0;
+}
+
+.release-date i {
+  color: #BA3CF4;
+  font-size: 16px;
+}
+
+.trailer-title {
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.bi-star-fill {
+  color: #FBE40E;
+  font-size: .9em;
+}
+
+.bi-star-fill.no-star {
+  color: #AFAEA7 !important;
+}
+
+#aviso-portabilidade {
+  padding-top: 5rem;
+  display: none;
+}
+
+.trailer-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.add-list-btn {
+  background: none;
+  border: none;
+  font-size: 40px; 
+  cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+  padding: 0;
+  line-height: 1;
+  margin-top: 5px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-list-btn i {
+  color: #BA3CF4 !important; 
+  transition: color 0.25s ease;
+}
+
+.add-list-btn.active i {
+  color: #BA3CF4 !important;
+}
+
+.add-list-btn.active {
+  animation: pop 0.35s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.35); }
+  60% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+/* -------------------- TENDÊNCIAS ESTA SEMANA -------------------- */
+.trending {
+  padding: 0 18px; 
+}
+
+.trending-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px; 
+  margin-top: 6px;
+}
+
+.trend-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trend-card img {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  aspect-ratio: 2 / 3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.trend-card img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+}
+
+.trend-card h6 {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 14.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.trend-card .star-review {
+  margin-top: 6px;
+  justify-content: center;
+  display: flex;
+  gap: 4px;
+}
+
+.trend-card .bi-star-fill, .trend-card .bi-star-half, .trend-card .bi-star {
+  color: #FBE40E;
+  font-size: 20px; 
+}
+
+/* -------------------- ÚLTIMAS OPINIÕES -------------------- */
+.reviews {
+  padding: 0 18px;
+  margin-top: 2.5rem;
+}
+
+.review-card {
+  position: relative;
+  background: rgba(200, 155, 220, 0.15); 
+  border-radius: 18px;
+  padding: 16px 18px 20px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+}
+
+.review-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 1;
+}
+
+.review-img {
+  width: 90px; 
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.review-content h5 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.review-content h5 span {
+  color: #ccc;
+  font-weight: 400;
+  font-size: 13px;
+  margin-left: 6px;
+}
+
+.review-content .stars {
+  margin: 4px 0 6px;
+  display: flex;
+  gap: 3px;
+}
+
+.review-content .stars i {
+  color: #BA3CF4; 
+  font-size: 18px;
+}
+
+.review-content p {
+  font-size: 13px;
+  color: #eee;
+  line-height: 1.45;
+  margin: 0;
+  max-width: 95%;
+  text-align: justify; 
+}
+
+.review-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reviewer span {
+  font-size: 12px;
+  color: #ddd;
+}
+
+.reviewer-photo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+.review-card i.bi-heart, .review-card i.bi-heart-fill {
+  position: absolute;
+  bottom: 10px; 
+  right: 22px; 
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.review-card i.liked {
+  color: #b04dff; 
+  animation: pop 0.35s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.35); }
+  60% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+/* -------------------- TÍTULOS H3 -------------------- */
+
+.trending h3, .trailers h3, .reviews h3, .top10 h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  padding: 0 18px;
+}
+
+.trending h3 i, .trailers h3 i, .reviews h3 i, .top10 h3 i {
+  color: #b04dff;
+  font-size: 24px;
+}
+
+/* -------------------- TOP 10 FILMES E SÉRIES -------------------- */
+
+.top10 {
+  padding-right: 18px;
+  padding-left: 0; 
+  margin-top: 2.5rem;
+}
+
+.top10 h3{
+  padding: 0 35px;
+}
+
+.top10-row {
+  display: flex;
+  gap: 105px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  padding-bottom: 10px;
+  padding-left: 90px; 
+  scroll-padding-left: 80px;
+}
+
+.top10-row::-webkit-scrollbar {
+  display: none;
+}
+
+.top10-card {
+  position: relative;
+  flex: 0 0 40%; 
+  aspect-ratio: 2 / 3;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: visible;
+}
+
+.top10-card img {
+  width: 105%; 
+  height: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  z-index: 2;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s ease;
+}
+
+.top10-card:hover img {
+  transform: scale(1.05);
+}
+
+.ranking-number {
+  position: absolute;
+  font-size: 300px; 
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+  opacity: 0.95; 
+  z-index: 1;
+  pointer-events: none;
+  text-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.7),
+    0 0 20px rgba(186, 60, 244, 0.25); 
+  left: -100px; 
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.top10-card.rank1 .ranking-number {
+  left: -80px; 
+}
+
+.rank1 .ranking-number,
+.rank2 .ranking-number,
+.rank3 .ranking-number,
+.rank4 .ranking-number {
+  color: #BA3CF4 !important;
+}
+
+.rank5 .ranking-number,
+.rank6 .ranking-number,
+.rank7 .ranking-number,
+.rank8 .ranking-number {
+  color: #BC5BE6 !important;
+}
+
+.rank9 .ranking-number,
+.rank10 .ranking-number {
+  color: #BD71DF !important;
+}
+
+
+/* -------------------- RESPONSIVIDADE PARA DESKTOP (AVISO) -------------------- */
+@media (min-width: 576px) {
+  body * {
+    display: none;
+  }
+
+  body #aviso-portabilidade, body #aviso-portabilidade * {
+    display: block !important;
+    color: white;
+    text-align: center;
+  }
+}
+
+/* -------------------- RESPONSIVIDADE -------------------- */
+
+@media (max-width: 576px) {
+  
+  .top10-card {
+    position: relative;
+    flex: 0 0 40%;
+    aspect-ratio: 2 / 3;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .top10-card img {
+    width: 105%;
+    height: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+    z-index: 2;
+    transform: translateX(20px); /* 🔹 move o card levemente pra direita */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    transition: transform 0.25s ease;
+  }
+  
+  .top10-card:hover img {
+    transform: translateX(20px) scale(1.05); /* mantém o deslocamento no hover */
+  }
+
+  .ranking-number {
+    font-size: 250px; 
+    left: -75px; 
+    opacity: 1; 
+  }
+
+  .top10-row {
+    padding-top: 25px; 
+    padding-bottom: 25px;
+    padding-left: 90px;
+    scroll-padding-left: 90px;
+    gap: 115px; 
+  }
+  
+  .top10-card.rank1 .ranking-number {
+    left: -60px;
+  }
+
+  .star-review .bi-star-fill, .star-review .bi-star-half, .star-review .bi-star, .review-content .stars i {
+    font-size: 18px; 
+  }
+
+  .review-content p {
+    font-size: 12.5px; 
+  }
+  
+  .review-img {
+    width: 80px; 
+  }
+}
+
+@media (max-width: 410px) {
+  
+  .top10-card {
+    flex: 0 0 48%;
+  }
+  
+  .top10-card:hover img {
+    transform: scale(1.05);
+    z-index: 5;
+  }
+
+  .ranking-number {
+    font-size: 190px;
+    left: -50px;
+    opacity: 1;
+  }
+
+  .top10-row {
+    padding-top: 25px; 
+    padding-bottom: 25px;
+    padding-left: 60px; 
+    scroll-padding-left: 60px; 
+    gap: 70px; 
+  }
+
+  .top10-card.rank1 .ranking-number {
+    left: -60px; 
+  }
+
+  .star-review .bi-star-fill, .star-review .bi-star-half, .star-review .bi-star, .review-content .stars i {
+    font-size: 15px; 
+  }
+  
+  .trend-card h6 {
+    font-size: 13.5px;
+  }
+
+  .trending-row {
+    flex-direction: column;
+    align-items: center; 
+    gap: 22px;
+  }
+
+  .trend-card img {
+    width: 85%;
+  }
+}
+
+/* -------------------- RESPONSIVIDADE GERAL DE ESTRELAS -------------------- */
+@media (max-width: 384px) {
+  .bi-star-fill,  .bi-star-half, .bi-star
+   {
+    font-size: .75rem !important;
+  }
+}
+
+/* -------------------- RESPONSIVIDADE DE TENDÊNCIAS (QUEBRA DE LINHA) -------------------- */
+@media (max-width: 390px) {
+  .trending-row {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .trend-card img {
+    width: 85%;
+  }
+}
