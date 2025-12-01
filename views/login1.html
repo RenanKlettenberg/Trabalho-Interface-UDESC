@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/login1.css">
+  <title>CineDiary</title>
+</head>
+<section id="aviso-portabilidade">
+  <h1>Atenção!</h1>
+  <span>Este projeto não tem intenção de ser compatível com dispositivos maiores de 576px!</span>
+</section>
+
+<body>
+
+  <section class="carousel" id="carousel">
+    <img src="../imgs/interestelar.jpg" class="active">
+    <img src="../imgs/antes_amanhecer.jpg">
+    <img src="../imgs/lalaland.jpg">
+    <img src="../imgs/friends.jpg">
+
+    <div class="carousel-text">Comece sua jornada cinematográfica.</div>
+
+    <div class="dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </section>
+
+  <div class="bottom-card">
+    <p>Conecte-se com quem ama cinema como você.</p>
+
+    <button class="btn-login" id="btnEntrar">Entrar</button>
+
+    <div class="create">
+      <span>Ou Criar Conta</span>
+      <svg class="create-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"
+        focusable="false">
+        <path
+          d="M4 8a.5.5 0 0 1 .5-.5h6.793L9.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L11.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+      </svg>
+    </div>
+  </div>
+
+  <script>
+    const imgs = document.querySelectorAll('.carousel img');
+    const dots = document.querySelectorAll('.dot');
+    let i = 0;
+
+    function slide(n) {
+      imgs.forEach(e => e.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      imgs[n].classList.add('active');
+      dots[n].classList.add('active');
+    }
+
+    setInterval(() => {
+      i = (i + 1) % imgs.length;
+      slide(i)
+    }, 3500);
+
+    btnEntrar.addEventListener('click', function () {
+      // Redireciona para a tela de login (mude 'login.html' para o nome do seu arquivo)
+      window.location.href = 'login2.html';
+    });
+  </script>
+
+</body>
+
+</html>
