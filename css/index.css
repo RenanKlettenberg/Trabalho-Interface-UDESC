@@ -179,15 +179,18 @@ header .bi-list {
 
 .banner-img {
   width: 100%;
-  height: 330px;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
   border-radius: 75px;
+  transition: all 0.3s ease;
+  content: url("../imgs/duna.png");
 }
 
 .banner-content {
   position: absolute;
-  bottom: 30px;
+  bottom: 25px;
   left: 0;
   right: 0;
   display: flex;
@@ -218,7 +221,8 @@ header .bi-list {
   font-size: 16px;
 }
 
-.banner-info .genre, .banner-info .year {
+.banner-info .genre,
+.banner-info .year {
   font-size: 15px;
 }
 
@@ -271,48 +275,6 @@ section h3 {
 section h3 i {
   color: #b04dff;
   font-size: 16px;
-}
-
-/* -------------------- Últimas Opiniões -------------------- */
-.reviews {
-  margin-top: 2rem;
-}
-
-.review-card {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 1rem;
-  background: #1b1b1b;
-  padding: .8rem;
-  border-radius: 10px;
-}
-
-.review-img {
-  width: 60px;
-  height: 80px;
-  background: #333;
-  border-radius: 5px;
-}
-
-.review-content h5 {
-  font-size: 14px;
-  margin: 0;
-}
-
-.review-content span {
-  color: #bbb;
-  font-size: 12px;
-}
-
-.stars i {
-  color: #b04dff;
-  font-size: 12px;
-}
-
-.review-content p {
-  font-size: 12px;
-  margin-top: 4px;
-  color: #ccc;
 }
 
 /* -------------------- TRAILERS RECENTES -------------------- */
@@ -510,14 +472,14 @@ section h3 i {
 
 .review-card {
   position: relative;
-  background: rgba(200, 155, 220, 0.15); 
+  background: rgba(200, 155, 220, 0.15);
   border-radius: 18px;
-  padding: 16px 18px 20px; 
+  padding: 16px 18px 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 12px;
-  margin-bottom: 14px; 
+  margin-bottom: 14px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(6px);
 }
@@ -530,11 +492,17 @@ section h3 i {
 }
 
 .review-img {
-  width: 90px; 
+  width: 90px;
   height: 100%;
   border-radius: 12px;
   object-fit: cover;
   flex-shrink: 0;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .review-content h5 {
@@ -558,7 +526,7 @@ section h3 i {
 }
 
 .review-content .stars i {
-  color: #BA3CF4; 
+  color: #BA3CF4;
   font-size: 18px;
 }
 
@@ -568,7 +536,7 @@ section h3 i {
   line-height: 1.45;
   margin: 0;
   max-width: 95%;
-  text-align: justify; 
+  text-align: justify;
 }
 
 .review-right {
@@ -599,8 +567,8 @@ section h3 i {
 
 .review-card i.bi-heart, .review-card i.bi-heart-fill {
   position: absolute;
-  bottom: 10px; 
-  right: 22px; 
+  bottom: 10px;
+  right: 22px;
   font-size: 22px;
   color: rgba(255, 255, 255, 0.25);
   cursor: pointer;
@@ -608,7 +576,7 @@ section h3 i {
 }
 
 .review-card i.liked {
-  color: #b04dff; 
+  color: #b04dff;
   animation: pop 0.35s ease;
 }
 
@@ -729,6 +697,12 @@ section h3 i {
   color: #BD71DF !important;
 }
 
+.review-card,
+.banner-container {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
 
 /* -------------------- RESPONSIVIDADE PARA DESKTOP (AVISO) -------------------- */
 @media (min-width: 576px) {
@@ -764,13 +738,14 @@ section h3 i {
     border-radius: 18px;
     object-fit: cover;
     z-index: 2;
-    transform: translateX(20px); /* 🔹 move o card levemente pra direita */
+    transform: translateX(20px); 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
   
   .top10-card:hover img {
-    transform: translateX(20px) scale(1.05); /* mantém o deslocamento no hover */
+    transform: translateX(20px) scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.75);
   }
 
   .ranking-number {
@@ -791,7 +766,10 @@ section h3 i {
     left: -60px;
   }
 
-  .star-review .bi-star-fill, .star-review .bi-star-half, .star-review .bi-star, .review-content .stars i {
+  .star-review .bi-star-fill, 
+  .star-review .bi-star-half, 
+  .star-review .bi-star, 
+  .review-content .stars i {
     font-size: 18px; 
   }
 
@@ -804,14 +782,18 @@ section h3 i {
   }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 435px) {
   
   .top10-card {
-    flex: 0 0 48%;
+    flex: 0 0 40%;
   }
   
+  .top10-card img {
+    transform: translateX(10px); 
+  }
+
   .top10-card:hover img {
-    transform: scale(1.05);
+    transform: translateX(10px) scale(1.05); 
     z-index: 5;
   }
 
@@ -830,13 +812,12 @@ section h3 i {
   }
 
   .top10-card.rank1 .ranking-number {
-    left: -60px; 
+    left: -50px; 
   }
+}
 
-  .star-review .bi-star-fill, .star-review .bi-star-half, .star-review .bi-star, .review-content .stars i {
-    font-size: 15px; 
-  }
-  
+@media (max-width: 410px) {
+
   .trend-card h6 {
     font-size: 13.5px;
   }
@@ -850,15 +831,13 @@ section h3 i {
   .trend-card img {
     width: 85%;
   }
+
+  .star-review .bi-star-fill, .star-review .bi-star-half, .star-review .bi-star, .review-content .stars i {
+    font-size: 15px; 
+  }
+
 }
 
-/* -------------------- RESPONSIVIDADE GERAL DE ESTRELAS -------------------- */
-@media (max-width: 384px) {
-  .bi-star-fill,  .bi-star-half, .bi-star
-   {
-    font-size: .75rem !important;
-  }
-}
 
 /* -------------------- RESPONSIVIDADE DE TENDÊNCIAS (QUEBRA DE LINHA) -------------------- */
 @media (max-width: 390px) {
@@ -869,5 +848,154 @@ section h3 i {
 
   .trend-card img {
     width: 85%;
+  }
+}
+
+/* -------------------- RESPONSIVIDADE DO BANNER -------------------- */
+
+@media (max-width: 575px) {
+  .banner-container {
+    width: 94%;
+    border-radius: 50px;
+    box-shadow:
+      inset 0px -70px 120px rgba(0, 0, 0, 0.85),
+      inset 0px 50px 100px rgba(0, 0, 0, 0.6);
+  }
+
+  .banner-img {
+    aspect-ratio: 16 / 9;
+    content: url("../imgs/duna.png");
+  }
+
+  .banner-info {
+    margin-left: 25px;
+    gap: 10px;
+  }
+
+  .banner-btn {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 450px) {
+  .banner-container {
+    width: 95%;
+    border-radius: 35px;
+  }
+
+  .banner-img {
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    content: url("../imgs/duna-vertical.jpg");
+  }
+
+  .banner-content {
+    bottom: 130px; 
+    gap: 8px;
+  }
+
+  .banner-info {
+    justify-content: center;
+    margin-left: 0;
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .banner-info i {
+    font-size: 17px;
+  }
+
+  .banner-buttons {
+    flex-direction: row; 
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .banner-btn {
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 10px;
+  }
+
+  .banner-btn i {
+    font-size: 15px;
+  }
+}
+
+/* -------------------- ÚLTIMAS OPINIÕES -------------------- */
+@media (max-width: 575px) {
+
+  .review-card {
+    flex-direction: row;
+    align-items: stretch;
+    padding: 12px 14px 16px;
+    gap: 10px;
+  }
+
+  .review-left {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .review-img {
+    width: 100px;
+    max-height: 200px;
+  }
+
+  .review-content {
+    flex: 1;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 6px;
+  }
+
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .review-header h5 {
+    font-size: 14px;
+  }
+
+  .review-header span {
+    font-size: 12px;
+    color: #ccc;
+  }
+
+  .review-body p {
+    font-size: 12.5px;
+    color: #eee;
+    line-height: 1.4;
+    text-align: justify;
+  }
+
+  .review-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .review-card i.bi-heart, .review-card i.bi-heart-fill {
+    position: static;
+    font-size: 20px;
+    margin-top: 4px;
+  }
+
+  .reviewer {
+    gap: 6px;
+  }
+
+  .reviewer span {
+    font-size: 11px;
+  }
+
+  .reviewer-photo {
+    width: 28px;
+    height: 28px;
   }
 }
