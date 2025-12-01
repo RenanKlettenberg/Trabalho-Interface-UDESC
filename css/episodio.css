@@ -1,122 +1,214 @@
 #banner img {
-    width: 100%;
-
+  width: 100%;
 }
 
-small{
-    font-size: 13px;
+small {
+  font-size: 13px;
 }
 
-button{
-    cursor: pointer;
-    border: none;
+button {
+  cursor: pointer;
+  border: none;
 }
 
 #banner {
-    position: relative;
+  position: relative;
 }
 
 .overlay-banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, #0B070D 20%, #0b070d65 40%, #0b070d00 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    #0b070d 20%,
+    #0b070d65 40%,
+    #0b070d00 100%
+  );
 }
 
 .info-banner {
-    position: absolute;
-    bottom: 0%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 1.25rem;
+  position: absolute;
+  bottom: 0%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem;
 }
 
 #banner .info-banner img {
-    width: 25%;
-    border-radius: 20px;
+  width: 25%;
+  border-radius: 20px;
 }
 
-.text-info-banner{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: center; 
-    justify-content: center;
+.text-info-banner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
-
 
 .text-info-banner span {
-    font-size: 30px;
-    font-weight: bold;
-    align-items: center;
-    width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  align-items: center;
+  width: 100%;
 }
 
 .info-banner .text-info-banner p {
-    margin: 0;
-    font-size: 13px;
-    text-align: center;
-    transform: translateY(-5px);
-    align-items: center;
+  margin: 0;
+  font-size: 13px;
+  text-align: center;
+  transform: translateY(-5px);
+  align-items: center;
 }
 
 .nav-item {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .nav-item button {
-    width: 100%;
-    padding: 0;
-    color: white !important;
-    background: none !important;
-    border: none !important;
-    font-size: 12px;
-    font-weight: bold;
+  width: 100%;
+  padding: 0;
+  color: white !important;
+  background: none !important;
+  border: none !important;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .nav-link.active {
-    border-bottom: 2px solid white !important;
+  border-bottom: 2px solid white !important;
 }
 
-.content{
-    padding:20px;
+.content {
+  padding: 0px 20px 20px 20px;
 }
 
-.personagens{
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    overflow-y: hidden;
+.personagens {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
 }
 
 .personagens::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-.personagem img{
-    width: 70px;
-    height: 94px;
-    object-fit: cover;
-    border-radius: 20px;
+.personagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.nomeAtor{
-    font-size: 15px;
-    text-align: center;
-    width: 100%;
+.personagem img {
+  width: 100px;
+  height: 124px;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
-.nomePersonagem{
-    font-size: 13px;
-    width: 100%
+.personagem span,
+small {
+  text-align: center;
 }
 
-p{
-    text-align: justify;
+.nomeAtor {
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
 }
 
+.nomePersonagem {
+  font-size: 13px;
+  width: 100%;
+}
 
+p {
+  text-align: justify;
+}
 
+.avaliacao {
+  background-color: #5f307544;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  display: flex; /* garante que os filhos sejam flexíveis */
+  flex-direction: column; /* itens um abaixo do outro */
+  align-items: center; /* centraliza horizontalmente */
+  width: 100%; /* importante para que o flex interno funcione */
+  box-sizing: border-box; /* evita overflow por padding */
+  overflow-x: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.459);
+}
+
+.nota {
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.459);
+}
+
+.sentimento {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.459); /* ou center se quiser centralizar */
+}
+
+.emoji {
+  height: 70px;
+  width: 70px; /* altura fixa para não achatar */
+  background-color: azure;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px; /* padding interno respeitado */
+  box-sizing: border-box; /* garante que padding não estoure o tamanho */
+  text-align: center;
+}
+
+.fa-solid {
+  color: #5f3075;
+  font-size: 40px;
+}
+
+.box {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.sentimento p {
+  text-align: center;
+}
+
+h6 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.sectionAvaliacao {
+  display: none;
+}
+
+.assistido {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.img-assistido {
+  width: 50px;
+  height: 50px;
+}
