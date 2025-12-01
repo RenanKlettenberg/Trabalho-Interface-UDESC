@@ -3,7 +3,7 @@ var options = {
         name: 'Ambos',
         data: [80, 50, 30, 40, 100, 20],
     }, {
-        name: 'Todos',
+        name: 'Filmes',
         data: [20, 30, 40, 80, 20, 80],
     }, {
         name: 'Séries',
