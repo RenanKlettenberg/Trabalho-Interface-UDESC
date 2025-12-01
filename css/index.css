@@ -710,16 +710,24 @@ section h3 i {
   left: -80px; 
 }
 
-.rank1 .ranking-number { color: #BA3CF4; }
-.rank2 .ranking-number { color: #BC5BE6; }
-.rank3 .ranking-number { color: #BD71DF; }
-.rank4 .ranking-number { color: #BE88D8; }
-.rank5 .ranking-number { color: #BF9FD1; }
-.rank6 .ranking-number { color: #C0B6CA; }
-.rank7 .ranking-number { color: #C1BDC3; }
-.rank8 .ranking-number { color: #C2C2BC; }
-.rank9 .ranking-number { color: #C3C7B5; }
-.rank10 .ranking-number { color: #C4CCAE; }
+.rank1 .ranking-number,
+.rank2 .ranking-number,
+.rank3 .ranking-number,
+.rank4 .ranking-number {
+  color: #BA3CF4 !important;
+}
+
+.rank5 .ranking-number,
+.rank6 .ranking-number,
+.rank7 .ranking-number,
+.rank8 .ranking-number {
+  color: #BC5BE6 !important;
+}
+
+.rank9 .ranking-number,
+.rank10 .ranking-number {
+  color: #BD71DF !important;
+}
 
 
 /* -------------------- RESPONSIVIDADE PARA DESKTOP (AVISO) -------------------- */
