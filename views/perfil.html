@@ -87,7 +87,7 @@
         </nav>
 
         <div class="tab-content" id="tabs-content">
-            <section class="tab-pane fade" id="tab-sobre-mim" role="tabpanel"
+            <section class="tab-pane fade show active" id="tab-sobre-mim" role="tabpanel"
                 aria-labelledby="tab-sobre-mim" tabindex="0">
                 <div class="tab-container">
                     <section>
@@ -509,7 +509,7 @@
                 </div>
             </section>
 
-            <section class="tab-pane fade show active" id="tab-estatisticas" role="tabpanel" aria-labelledby="tab-estatisticas"
+            <section class="tab-pane fade" id="tab-estatisticas" role="tabpanel" aria-labelledby="tab-estatisticas"
                 tabindex="0">
                 <div class="tab-container">
                     <section id="section-dados">
@@ -632,10 +632,10 @@
 
                     <section>
                         <h6 class="titulo-secao">Suas preferências</h6>
-
+                        <div id="preferencias-chart"></div>
                     </section>
 
-                    <section>
+                    <section id="section-contribuicoes">
                         <div class="d-flex justify-content-between align-items-center">
                             <h6 class="titulo-secao mb-0">Contribuições pra lista</h6>
                             <select name="select_filtro" id="select_filtro" class="form-select">
@@ -644,6 +644,7 @@
                                 <option value="Séries">Todas</option>
                             </select>
                         </div>
+                        <div id="contribuicoes-chart"></div>
                     </section>
                 </div>
             </section>
@@ -656,6 +657,8 @@
     </section>
 
     <script src="../js/sidebar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="../js/apexcharts.js"></script>
     <script src="https://unpkg.com/phosphor-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

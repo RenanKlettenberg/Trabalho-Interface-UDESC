@@ -366,7 +366,7 @@ header .dropdown-menu {
 }
 
 /*Notas-----------*/
-.notas>div{
+.notas>div {
     padding: .75rem .5rem;
 }
 
@@ -393,7 +393,23 @@ header .dropdown-menu {
         font-size: .75rem;
     }
 
-    .notas .star-review{
+    .notas .star-review {
         font-size: 1rem;
     }
+}
+
+#preferencias-chart {
+    transform: translateY(-20px);
+}
+
+.apexcharts-legend {
+    justify-content: center !important;
+}
+
+#section-contribuicoes {
+    transform: translateY(-50px);
+}
+
+#preferencias-chart .apexcharts-yaxis * {
+    fill: rgb(240, 240, 240);
 }
