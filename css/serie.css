@@ -151,6 +151,7 @@ h6 {
   gap: 20px;
   overflow-x: auto;
   overflow-y: hidden;
+  margin-bottom: 16px;
 }
 
 .plataforma {
@@ -170,17 +171,23 @@ h6 {
   gap: 20px;
   overflow-x: auto;
   overflow-y: hidden;
-}
-
-.elencos::-webkit-scrollbar {
-  display: none;
+  scrollbar-width: none;
+  margin: 1rem;
 }
 
 .ator img {
-  width: 70px;
-  height: 94px;
+  width: 100px;
+  height: 124px;
   object-fit: cover;
   border-radius: 20px;
+}
+
+.ator span, small{
+  display: block;
+}
+
+.ator{
+  text-align: center;
 }
 
 .nomeAtor {
@@ -218,6 +225,7 @@ h6 {
   flex-direction: row;
   gap: 10px;
   margin-bottom: 10px;
+  position: relative;
 }
 
 .escrita {
@@ -226,9 +234,16 @@ h6 {
   gap: 0px;
 }
 
+.fa-ellipsis-vertical {
+  position: absolute; 
+  top: 0;           
+  right: 0;
+  font-size: 4.5vw;           
+}
+
 #reviews {
-  align-items: right;
-  justify-content: end;
+  align-items: left;
+  justify-content: left;
 }
 
 .temporada {
@@ -283,9 +298,6 @@ h6 {
   display: none;
 }
 
-/* ====== FIX FINAL: garante imagem do episódio à ESQUERDA ====== */
-
-/* garante que o container dos episódios seja um flex normal (linha) */
 #tab-episodios .episodio {
   display: flex !important;
   flex-direction: row !important;
@@ -299,32 +311,29 @@ h6 {
   margin-bottom: 10px;
 }
 
-/* força a imagem da capa a NÃO flutuar, NÃO ser movida e ficar à esquerda */
 #tab-episodios .episodio > .imgEp {
-  /* tamanho visual padrão — pode ajustar se quiser outro */
   width: 60px !important;
   height: 60px !important;
   object-fit: cover !important;
   border-radius: 10px !important;
 
-  /* override de qualquer float/position/order que cause problema */
   float: none !important;
-  position: static !important; /* remove absolute/relative indesejado */
-  margin: 0 12px 0 0 !important; /* espaço à direita, sem empurrar pra direita */
-  order: 0 !important; /* garante que vem antes do texto */
-  flex-shrink: 0 !important; /* não deixa o flex encolher ela */
+  position: static !important; 
+  margin: 0 12px 0 0 !important; 
+  order: 0 !important;
+  flex-shrink: 0 !important; 
   align-self: center !important;
 }
 
-/* garante que o bloco de texto ocupe o resto do espaço */
 #tab-episodios .episodio > .info {
   flex: 1 1 auto !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
+  border: none;
 }
 
-/* done (ícone) permanece absoluto no canto superior direito do card */
+
 #tab-episodios .episodio > .done {
   position: absolute !important;
   top: 10px !important;
@@ -334,14 +343,11 @@ h6 {
   object-fit: contain !important;
 }
 
-/* DEBUG OPTION (remova quando confirmar que está certo)
-   - mostra bordas pra você inspecionar facilmente onde está cada caixa */
-#tab-episodios .episodio {
-  outline: 1px dashed rgba(255, 255, 255, 0.06);
+.titulo{
+  font-weight: bold;
 }
-#tab-episodios .episodio > .imgEp {
-  outline: 1px solid rgba(255, 0, 0, 0.08);
-}
-#tab-episodios .episodio > .info {
-  outline: 1px solid rgba(0, 255, 0, 0.06);
+
+.fa-ellipsis-vertical{
+  justify-content: end;
+  text-align: end;
 }

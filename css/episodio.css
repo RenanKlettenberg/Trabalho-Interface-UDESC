@@ -84,7 +84,7 @@ button {
   border-bottom: 2px solid white !important;
 }
 
-.content {
+.tab-content {
   padding: 0px 20px 20px 20px;
 }
 
@@ -96,6 +96,7 @@ button {
   overflow-y: hidden;
   scroll-behavior: smooth;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .personagens::-webkit-scrollbar {
@@ -211,4 +212,133 @@ h6 {
 .img-assistido {
   width: 50px;
   height: 50px;
+}
+
+.comentar{
+    background-color: #5f307544;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.comentario{
+    background-color: #5f307544;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.topo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.infoCom {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.fa-ellipsis-vertical {
+  position: absolute; 
+  top: 0;           
+  right: 0;
+  color: white;
+  font-size: 4.5vw;             
+}
+
+.topo img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.comentario p{
+    font-size: 15px;
+}
+
+.comentario p + img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.interacoes{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.likes{
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  gap: 10px;
+}
+
+.comments{
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  gap: 10px;
+}
+
+.fa-heart, .fa-message{
+  color: white;
+  font-size: 4.5vw;
+  margin: 0px;
+}
+
+.interacoes p{
+  margin: 0px;
+}
+
+.comentar{
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.comentar span{
+  padding: 5px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.459);
+  color:  rgba(255, 255, 255, 0.781);
+  font-size: 13px;
+}
+
+.icones{
+  margin-top: 5px;
+}
+
+.iconeGif {
+  height: 22px !important;      /* tamanho que você quiser */
+  width: auto !important;       /* mantém proporção */
+  object-fit: contain !important; /* garante que nada será cortado */
+}
+
+.comentar img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.acoes{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.acoes button{
+  background-image:
+    url("../imgs/comentar.png");
+    background-size: contain;    /* mostra 100% da imagem */
+  background-position: center; /* centraliza */
+  background-repeat: no-repeat;
 }
