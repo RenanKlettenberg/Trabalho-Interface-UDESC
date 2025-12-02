@@ -1,0 +1,175 @@
+/* ===============================
+   CARD PRINCIPAL
+================================ */
+
+.review-card {
+  display: grid;
+  grid-template-columns: minmax(70px, 100px) 1fr;
+  gap: 12px;
+  background: radial-gradient(circle at top left, #150e1d, #0b0810);
+  padding: 26px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+}
+
+/* ===============================
+   POSTER
+================================ */
+.review-left img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ===============================
+   LOGO
+================================ */
+.logo-img {
+  height: 55px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* ===============================
+   TITULO
+================================ */
+.movie-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.movie-title span {
+  font-size: 12px;
+  color: #b04dff;
+  margin-left: 6px;
+}
+
+
+.stars {
+  margin-top: 4px;
+  color: #b04dff;
+  margin-bottom: 6px;
+}
+
+.stars i {
+  color: #b04dff !important;
+}
+
+.review-date {
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+  color: #aaa;
+}
+
+
+.review-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 6px;
+}
+
+
+.review-header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.user span {
+  font-size: 12px;
+  opacity: .75;
+}
+
+.user img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.4);
+}
+
+
+.review-right p {
+  margin-top: 10px;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: #cfcfcf;
+}
+
+
+.review-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.section-title {
+  font-size: 18px;
+  margin-top: 90px;
+  margin-bottom: 22px;
+  padding-left: 18px;
+  font-weight: 600;
+}
+
+
+
+@media (max-width: 576px) {
+  .review-card {
+    padding: 22px;
+    gap: 10px;
+  }
+
+  .review-left img {
+    height: 120px;
+  }
+
+  .movie-title {
+    font-size: 14px;
+  }
+
+  .review-right p {
+    font-size: 13px;
+  }
+
+  .user img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .review-card {
+    padding: 20px;
+  }
+
+  .review-left img {
+    height: 105px;
+  }
+
+  .movie-title {
+    font-size: 13px;
+  }
+}
