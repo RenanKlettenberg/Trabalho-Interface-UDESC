@@ -1,453 +1,338 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-+..."
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" href="../css/serie.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <title>CineDiary</title>
-  </head>
-  <body>
-    <header>
-      <button class="open-btn" onclick="toggleMenu()">
-        <i class="ph ph-list"></i>
-      </button>
-    </header>
-    <aside id="sidebar" class="sidebar">
-      <button class="open-btn" onclick="toggleMenu()">
-        <i class="ph ph-list"></i>
-      </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
 
-      <div class="top">
-        <div class="logo">
-          <span class="cine">CINE</span><span class="diary">DIARY</span>
-        </div>
+  <link rel="stylesheet" href="../css/serie.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>CineDiary</title>
+</head>
 
-        <nav class="menu">
-          <a href="#"><i class="ph ph-house"></i>Home</a>
-          <a href="#"><i class="ph ph-star"></i>Reviews</a>
-          <a href="#"><i class="ph ph-magnifying-glass"></i>Pesquisar</a>
-          <a href="perfil.html"><i class="ph ph-user"></i>Perfil</a>
-        </nav>
+<body>
+  <header>
+    <button class="open-btn" onclick="toggleMenu()">
+      <i class="ph ph-list"></i>
+    </button>
+  </header>
+  <aside id="sidebar" class="sidebar">
+    <button class="open-btn" onclick="toggleMenu()">
+      <i class="ph ph-list"></i>
+    </button>
+
+    <div class="top">
+      <div class="logo">
+        <span class="cine">CINE</span><span class="diary">DIARY</span>
       </div>
 
-      <div class="bottom-menu">
-        <a href="#"><i class="ph ph-gear"></i>Configurações</a>
-        <a href="#"><i class="ph ph-headset"></i>Ajuda / Suporte</a>
-      </div>
-    </aside>
-    <section id="banner">
-      <img src="../imgs/theRookieBanner.png" alt="Banner do perfil" />
-      <div class="overlay-banner"></div>
-      <div class="info-banner">
-        <img
-          class="img-info-banner"
-          src="../imgs/theRookieProfile.png"
-          alt="Imagem de perfil"
-        />
-        <div class="text-info-banner">
-          <span>The Rookie</span>
-          <p>2018 - Presente • 8 temporadas</p>
-        </div>
-      </div>
-    </section>
-    <nav>
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link active"
-            id="sobre-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#tab-sobre"
-            type="button"
-            role="tab"
-            aria-controls="tab-sobre"
-            aria-selected="true"
-          >
-            SOBRE
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="episodios-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#tab-episodios"
-            type="button"
-            role="tab"
-            aria-controls="tab-episodios"
-            aria-selected="false"
-          >
-            EPISÓDIOS
-          </button>
-        </li>
-      </ul>
-    </nav>
-    <div class="tab-content">
-      <section
-        class="tab-pane fade show active"
-        id="tab-sobre"
-        role="tabpanel"
-        aria-labelledby="sobre-tab"
-      >
-        <div class="inicio">
-          <div class="avaliacoes">
-            <h6>Avaliações</h6>
-            <div class="star-review">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <p class="avaliacoes">• 1200 avaliações</p>
-            </div>
-            <class class="rotten-imdb">
-              <h6 class="titulo-avaliacao">Rotten Tomatoes</h6>
-              <p class="avaliacoes">78%</p>
-            </class>
-            <class class="rotten-imdb">
-              <h6 class="titulo-avaliacao">IMDB</h6>
-              <p class="avaliacoes">8,0/10</p>
-            </class>
-          </div>
-          <div class="addLista">
-            <button class="btn">
-              <i class="fa-solid fa-plus"></i>
-              Adicionar à Lista
-            </button>
-          </div>
-        </div>
-        <div class="sinopse">
-          <p>
-            Na série The Rookie, John Nolan (Nathan Fillion) está realmente
-            nadando contra a corrente. Enquanto as pessoas da sua idade estão no
-            auge da carreira e já possuem uma rotina definida, Nolan se arrisca
-            na cidade grande com um único objetivo: realizar o sonho de se
-            tornar um policial no Departamento de Polícia de Los Angeles (LAPD).
-            Como o calouro mais velho da turma, ele encara todos os desafios
-            dessa perigosa carreira, afinal, é sua chance de recomeçar a vida e
-            realizar seu desejo. Na série, ele e seus parceiros enfrentam
-            desafios diários e, juntos, somam forças na delegacia.
-          </p>
-        </div>
-        <h6>Gêneros</h6>
-        <div class="generos">
-          <button class="botao-genero" style="--img: url('../imgs/drama.png')">
-            DRAMA
-          </button>
-          <button
-            class="botao-genero"
-            style="--img: url('../imgs/policial.png')"
-          >
-            POLICIAL
-          </button>
-          <button
-            class="botao-genero"
-            style="--img: url('../imgs/comedia.png')"
-          >
-            COMÉDIA
-          </button>
-        </div>
-        <h6>Plataformas</h6>
-        <div class="plataformas">
-          <img
-            class="plataforma"
-            src="../imgs/netflix.png"
-            alt="Logo da Netflix"
-          />
-          <img
-            class="plataforma"
-            src="../imgs/disneyplus.png"
-            alt="Logo do Disney +"
-          />
-          <img
-            class="plataforma"
-            src="../imgs/primevideo.png"
-            alt="Logo da Prime Video"
-          />
-          <img
-            class="plataforma"
-            src="../imgs/appletv.png"
-            alt="Logo da Apple TV"
-          />
-          <img
-            class="plataforma"
-            src="../imgs/paramountplus.png"
-            alt="Logo da Paramount +"
-          />
-        </div>
-        <h6>Elenco</h6>
-        <div class="elenco">
-          <div class="ator">
-            <img
-              src="../imgs/nathan-fillion.png"
-              alt="Foto do ator Nathan Fillion"
-            />
-            <span class="nomeAtor">Nathan Fillion</span>
-            <small class="nomePersonagem">John Nolean</small>
-          </div>
-          <div class="ator">
-            <img src="../imgs/melissa.png" alt="Foto da atriz Melissa O'Neil" />
-            <span class="nomeAtor">Melissa O'Neil</span>
-            <small class="nomePersonagem">Lucy Chen</small>
-          </div>
-          <div class="ator">
-            <img src="../imgs/mekia.png" alt="Foto da atriz Mekia Cox" />
-            <span class="nomeAtor">Mekia Cox</span>
-            <small class="nomePersonagem">Nylah Harper</small>
-          </div>
-          <div class="ator">
-            <img src="../imgs/alyssa.png" alt="Foto da atriz Alyssa Diaz" />
-            <span class="nomeAtor">Alyssa Diaz</span>
-            <small class="nomePersonagem">Angela Lopez</small>
-          </div>
-          <div class="ator">
-            <img src="../imgs/eric.png" alt="Foto da atriz Alyssa Diaz" />
-            <span class="nomeAtor">Eric Winter</span>
-            <small class="nomePersonagem">Tim Bradford</small>
-          </div>
-        </div>
-        <section>
-          <h6>Reviews</h6>
-          <div class="review">
-            <div class="topo">
-              <img src="../imgs/rebecca.png" alt="Foto de Perfil" />
-              <div class="escrita">
-                <span>Rebecca Pearson</span>
-                <small>13 de novembro de 2025</small>
-              </div>
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </div>
-            <div class="star-review" id="reviews">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-            </div>
-            <p class="titulo">Série maravilhosa</p>
-            <p>
-              Série muito boa, assisti tudo em menos de 2 semanas, é raro eu
-              maratonar e valeu a pena! Sobre a avaliação, só não é obra prima
-              por ser muito previsível. Deveriam mandar os figurantes pararem de
-              andar o tempo todo dentro da delegacia, toda hora a galera andando
-              sem direção e poucos participam da série, deveriam aproveitar mais
-              outros personagens.
-            </p>
-          </div>
-          <div class="review">
-            <div class="topo">
-              <img src="../imgs/guido.png" alt="Foto de perfil" />
-              <div class="escrita">
-                <span>Guido</span>
-                <small>13 de novembro de 2025</small>
-              </div>
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </div>
-            <div class="star-review" id="reviews">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-            </div>
-            <p class="titulo">Série maravilhosa</p>
-            <p>
-              Série muito boa, assisti tudo em menos de 2 semanas, é raro eu
-              maratonar e valeu a pena! Sobre a avaliação, só não é obra prima
-              por ser muito previsível. Deveriam mandar os figurantes pararem de
-              andar o tempo todo dentro da delegacia, toda hora a galera andando
-              sem direção e poucos participam da série, deveriam aproveitar mais
-              outros personagens.
-            </p>
-          </div>
-        </section>
-      </section>
-
-      <section
-        class="tab-pane fade"
-        id="tab-episodios"
-        role="tabpanel"
-        aria-labelledby="episodios-tab"
-      >
-        <div class="temporada">
-          <div class="imgTemporada" style="--img: url('../imgs/temp1.png')">
-            <img
-              src="../imgs/done.png"
-              alt="ícone de concluído"
-              class="doneTemp"
-            />
-            <div class="detalhesTemp">
-              <h6>Temporada 1</h6>
-              <i class="fa-solid fa-angle-down" id="showEpisodes"></i>
-            </div>
-            <p>3/5</p>
-          </div>
-          <div class="episodios">
-            <div class="episodio">
-              <img class="imgEp" src="../imgs/ep1.png" alt="Foto do episódio" />
-              <div class="info">
-                <span>Temporada 1 - Episódio 1</span>
-                <small>Piloto</small>
-              </div>
-              <img
-                class="done"
-                src="../imgs/done.png"
-                alt="ícone de concluído"
-              />
-            </div>
-
-            <div class="episodio">
-              <img class="imgEp" src="../imgs/ep1.png" alt="Foto do episódio" />
-              <div class="info">
-                <span>Temporada 1 - Episódio 2</span>
-                <small>Piloto</small>
-              </div>
-              <img
-                class="done"
-                src="../imgs/done.png"
-                alt="ícone de concluído"
-              />
-            </div>
-
-            <div class="episodio">
-              <img class="imgEp" src="../imgs/ep1.png" alt="Foto do episódio" />
-              <div class="info">
-                <span>Temporada 1 - Episódio 3</span>
-                <small>Piloto</small>
-              </div>
-              <img
-                class="done"
-                src="../imgs/done.png"
-                alt="ícone de concluído"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="temporada">
-          <div class="imgTemporada" style="--img: url('../imgs/temp2.png')">
-            <img
-              src="../imgs/done.png"
-              alt="ícone de concluído"
-              class="doneTemp"
-            />
-            <div class="detalhesTemp">
-              <h6>Temporada 2</h6>
-              <i class="fa-solid fa-angle-down"></i>
-            </div>
-            <p>3/5</p>
-          </div>
-        </div>
-        <div class="temporada">
-          <div class="imgTemporada" style="--img: url('../imgs/temp3.png')">
-            <img
-              src="../imgs/done.png"
-              alt="ícone de concluído"
-              class="doneTemp"
-            />
-            <div class="detalhesTemp">
-              <h6>Temporada 3</h6>
-              <i class="fa-solid fa-angle-down"></i>
-            </div>
-            <p>3/5</p>
-          </div>
-        </div>
-        <div class="temporada">
-          <div class="imgTemporada" style="--img: url('../imgs/temp4.png')">
-            <img
-              src="../imgs/done.png"
-              alt="ícone de concluído"
-              class="doneTemp"
-            />
-            <div class="detalhesTemp">
-              <h6>Temporada 4</h6>
-              <i class="fa-solid fa-angle-down"></i>
-            </div>
-            <p>3/5</p>
-          </div>
-        </div>
-        <div class="temporada">
-          <div class="imgTemporada" style="--img: url('../imgs/temp5.png')">
-            <img
-              src="../imgs/done.png"
-              alt="ícone de concluído"
-              class="doneTemp"
-            />
-            <div class="detalhesTemp">
-              <h6>Temporada 5</h6>
-              <i class="fa-solid fa-angle-down"></i>
-            </div>
-            <p>3/5</p>
-          </div>
-        </div>
-        <div class="temporada">
-          <div class="imgTemporada" style="--img: url('../imgs/temp6.png')">
-            <img
-              src="../imgs/done.png"
-              alt="ícone de concluído"
-              class="doneTemp"
-            />
-            <div class="detalhesTemp">
-              <h6>Temporada 6</h6>
-              <i class="fa-solid fa-angle-down"></i>
-            </div>
-            <p>3/5</p>
-          </div>
-        </div>
-        <div class="temporada">
-          <div class="imgTemporada" style="--img: url('../imgs/temp7.png')">
-            <img
-              src="../imgs/done.png"
-              alt="ícone de concluído"
-              class="doneTemp"
-            />
-            <div class="detalhesTemp">
-              <h6>Temporada 7</h6>
-              <i class="fa-solid fa-angle-down"></i>
-            </div>
-            <p>3/5</p>
-          </div>
-        </div>
-      </section>
+      <nav class="menu">
+        <a href="index.html"><i class="bi bi-house"></i>Home</a>
+        <a href="reviews.html"><i class="bi bi-star"></i>Reviews</a>
+        <a href="#"><i class="bi bi-search"></i>Pesquisar</a>
+        <a href="perfil.html"><i class="ph ph-user"></i>Perfil</a>
+      </nav>
     </div>
 
-    <section id="aviso-portabilidade">
-      <h1>Atenção!</h1>
-      <span
-        >Este projeto não tem intenção de ser compatível com dispositivos
-        mairores de 576px!</span
-      >
+    <div class="bottom-menu">
+      <a href="#"><i class="ph ph-gear"></i>Configurações</a>
+      <a href="#"><i class="ph ph-headset"></i>Ajuda / Suporte</a>
+    </div>
+  </aside>
+  <section id="banner">
+    <img src="../imgs/theRookieBanner.png" alt="Banner do perfil" />
+    <div class="overlay-banner"></div>
+    <div class="info-banner">
+      <img class="img-info-banner" src="../imgs/theRookieProfile.png" alt="Imagem de perfil" />
+      <div class="text-info-banner">
+        <span>The Rookie</span>
+        <p>2018 - Presente • 8 temporadas</p>
+      </div>
+    </div>
+  </section>
+  <nav>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="sobre-tab" data-bs-toggle="tab" data-bs-target="#tab-sobre" type="button"
+          role="tab" aria-controls="tab-sobre" aria-selected="true">
+          SOBRE
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="episodios-tab" data-bs-toggle="tab" data-bs-target="#tab-episodios" type="button"
+          role="tab" aria-controls="tab-episodios" aria-selected="false">
+          EPISÓDIOS
+        </button>
+      </li>
+    </ul>
+  </nav>
+  <div class="tab-content">
+    <section class="tab-pane fade show active" id="tab-sobre" role="tabpanel" aria-labelledby="sobre-tab">
+      <div class="inicio">
+        <div class="avaliacoes">
+          <h6>Avaliações</h6>
+          <div class="star-review">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <p class="avaliacoes">• 1200 avaliações</p>
+          </div>
+          <class class="rotten-imdb">
+            <h6 class="titulo-avaliacao">Rotten Tomatoes</h6>
+            <p class="avaliacoes">78%</p>
+          </class>
+          <class class="rotten-imdb">
+            <h6 class="titulo-avaliacao">IMDB</h6>
+            <p class="avaliacoes">8,0/10</p>
+          </class>
+        </div>
+        <div class="addLista">
+          <button class="btn">
+            <i class="fa-solid fa-plus"></i>
+            Adicionar à Lista
+          </button>
+        </div>
+      </div>
+      <div class="sinopse">
+        <p>
+          Na série The Rookie, John Nolan (Nathan Fillion) está realmente
+          nadando contra a corrente. Enquanto as pessoas da sua idade estão no
+          auge da carreira e já possuem uma rotina definida, Nolan se arrisca
+          na cidade grande com um único objetivo: realizar o sonho de se
+          tornar um policial no Departamento de Polícia de Los Angeles (LAPD).
+          Como o calouro mais velho da turma, ele encara todos os desafios
+          dessa perigosa carreira, afinal, é sua chance de recomeçar a vida e
+          realizar seu desejo. Na série, ele e seus parceiros enfrentam
+          desafios diários e, juntos, somam forças na delegacia.
+        </p>
+      </div>
+      <h6>Gêneros</h6>
+      <div class="generos">
+        <button class="botao-genero" style="--img: url('../imgs/drama.png')">
+          DRAMA
+        </button>
+        <button class="botao-genero" style="--img: url('../imgs/policial.png')">
+          POLICIAL
+        </button>
+        <button class="botao-genero" style="--img: url('../imgs/comedia.png')">
+          COMÉDIA
+        </button>
+      </div>
+      <h6>Plataformas</h6>
+      <div class="plataformas">
+        <img class="plataforma" src="../imgs/netflix.png" alt="Logo da Netflix" />
+        <img class="plataforma" src="../imgs/disneyplus.png" alt="Logo do Disney +" />
+        <img class="plataforma" src="../imgs/primevideo.png" alt="Logo da Prime Video" />
+        <img class="plataforma" src="../imgs/appletv.png" alt="Logo da Apple TV" />
+        <img class="plataforma" src="../imgs/paramountplus.png" alt="Logo da Paramount +" />
+      </div>
+      <h6>Elenco</h6>
+      <div class="elenco">
+        <div class="ator">
+          <img src="../imgs/nathan-fillion.png" alt="Foto do ator Nathan Fillion" />
+          <span class="nomeAtor">Nathan Fillion</span>
+          <small class="nomePersonagem">John Nolean</small>
+        </div>
+        <div class="ator">
+          <img src="../imgs/melissa.png" alt="Foto da atriz Melissa O'Neil" />
+          <span class="nomeAtor">Melissa O'Neil</span>
+          <small class="nomePersonagem">Lucy Chen</small>
+        </div>
+        <div class="ator">
+          <img src="../imgs/mekia.png" alt="Foto da atriz Mekia Cox" />
+          <span class="nomeAtor">Mekia Cox</span>
+          <small class="nomePersonagem">Nylah Harper</small>
+        </div>
+        <div class="ator">
+          <img src="../imgs/alyssa.png" alt="Foto da atriz Alyssa Diaz" />
+          <span class="nomeAtor">Alyssa Diaz</span>
+          <small class="nomePersonagem">Angela Lopez</small>
+        </div>
+        <div class="ator">
+          <img src="../imgs/eric.png" alt="Foto da atriz Alyssa Diaz" />
+          <span class="nomeAtor">Eric Winter</span>
+          <small class="nomePersonagem">Tim Bradford</small>
+        </div>
+      </div>
+      <section>
+        <h6>Reviews</h6>
+        <div class="review">
+          <div class="topo">
+            <img src="../imgs/rebecca.png" alt="Foto de Perfil" />
+            <div class="escrita">
+              <span>Rebecca Pearson</span>
+              <small>13 de novembro de 2025</small>
+            </div>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+          <div class="star-review" id="reviews">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="titulo">Série maravilhosa</p>
+          <p>
+            Série muito boa, assisti tudo em menos de 2 semanas, é raro eu
+            maratonar e valeu a pena! Sobre a avaliação, só não é obra prima
+            por ser muito previsível. Deveriam mandar os figurantes pararem de
+            andar o tempo todo dentro da delegacia, toda hora a galera andando
+            sem direção e poucos participam da série, deveriam aproveitar mais
+            outros personagens.
+          </p>
+        </div>
+        <div class="review">
+          <div class="topo">
+            <img src="../imgs/guido.png" alt="Foto de perfil" />
+            <div class="escrita">
+              <span>Guido</span>
+              <small>13 de novembro de 2025</small>
+            </div>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+          <div class="star-review" id="reviews">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="titulo">Série maravilhosa</p>
+          <p>
+            Série muito boa, assisti tudo em menos de 2 semanas, é raro eu
+            maratonar e valeu a pena! Sobre a avaliação, só não é obra prima
+            por ser muito previsível. Deveriam mandar os figurantes pararem de
+            andar o tempo todo dentro da delegacia, toda hora a galera andando
+            sem direção e poucos participam da série, deveriam aproveitar mais
+            outros personagens.
+          </p>
+        </div>
+      </section>
     </section>
 
-    <script src="../js/sidebar.js"></script>
-    <script src="../js/serie.js"></script>
-    <script src="https://unpkg.com/phosphor-icons"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <section class="tab-pane fade" id="tab-episodios" role="tabpanel" aria-labelledby="episodios-tab">
+      <div class="temporada">
+        <div class="imgTemporada" style="--img: url('../imgs/temp1.png')">
+          <img src="../imgs/done.png" alt="ícone de concluído" class="doneTemp" />
+          <div class="detalhesTemp">
+            <h6>Temporada 1</h6>
+            <i class="fa-solid fa-angle-down" id="showEpisodes"></i>
+          </div>
+          <p>3/5</p>
+        </div>
+        <div class="episodios">
+          <div class="episodio">
+            <img class="imgEp" src="../imgs/ep1.png" alt="Foto do episódio" />
+            <div class="info">
+              <span>Temporada 1 - Episódio 1</span>
+              <small>Piloto</small>
+            </div>
+            <img class="done" src="../imgs/done.png" alt="ícone de concluído" />
+          </div>
+
+          <div class="episodio">
+            <img class="imgEp" src="../imgs/ep1.png" alt="Foto do episódio" />
+            <div class="info">
+              <span>Temporada 1 - Episódio 2</span>
+              <small>Piloto</small>
+            </div>
+            <img class="done" src="../imgs/done.png" alt="ícone de concluído" />
+          </div>
+
+          <div class="episodio">
+            <img class="imgEp" src="../imgs/ep1.png" alt="Foto do episódio" />
+            <div class="info">
+              <span>Temporada 1 - Episódio 3</span>
+              <small>Piloto</small>
+            </div>
+            <img class="done" src="../imgs/done.png" alt="ícone de concluído" />
+          </div>
+        </div>
+      </div>
+      <div class="temporada">
+        <div class="imgTemporada" style="--img: url('../imgs/temp2.png')">
+          <img src="../imgs/done.png" alt="ícone de concluído" class="doneTemp" />
+          <div class="detalhesTemp">
+            <h6>Temporada 2</h6>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <p>3/5</p>
+        </div>
+      </div>
+      <div class="temporada">
+        <div class="imgTemporada" style="--img: url('../imgs/temp3.png')">
+          <img src="../imgs/done.png" alt="ícone de concluído" class="doneTemp" />
+          <div class="detalhesTemp">
+            <h6>Temporada 3</h6>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <p>3/5</p>
+        </div>
+      </div>
+      <div class="temporada">
+        <div class="imgTemporada" style="--img: url('../imgs/temp4.png')">
+          <img src="../imgs/done.png" alt="ícone de concluído" class="doneTemp" />
+          <div class="detalhesTemp">
+            <h6>Temporada 4</h6>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <p>3/5</p>
+        </div>
+      </div>
+      <div class="temporada">
+        <div class="imgTemporada" style="--img: url('../imgs/temp5.png')">
+          <img src="../imgs/done.png" alt="ícone de concluído" class="doneTemp" />
+          <div class="detalhesTemp">
+            <h6>Temporada 5</h6>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <p>3/5</p>
+        </div>
+      </div>
+      <div class="temporada">
+        <div class="imgTemporada" style="--img: url('../imgs/temp6.png')">
+          <img src="../imgs/done.png" alt="ícone de concluído" class="doneTemp" />
+          <div class="detalhesTemp">
+            <h6>Temporada 6</h6>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <p>3/5</p>
+        </div>
+      </div>
+      <div class="temporada">
+        <div class="imgTemporada" style="--img: url('../imgs/temp7.png')">
+          <img src="../imgs/done.png" alt="ícone de concluído" class="doneTemp" />
+          <div class="detalhesTemp">
+            <h6>Temporada 7</h6>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <p>3/5</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="aviso-portabilidade">
+    <h1>Atenção!</h1>
+    <span>Este projeto não tem intenção de ser compatível com dispositivos
+      mairores de 576px!</span>
+  </section>
+
+  <script src="../js/sidebar.js"></script>
+  <script src="../js/serie.js"></script>
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
