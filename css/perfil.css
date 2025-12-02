@@ -195,7 +195,7 @@ header .dropdown-menu {
     color: #C89BDC;
     position: absolute;
     top: 2%;
-    left: -4%;
+    left: -2%;
     height: 100%;
     z-index: -5;
 }
@@ -212,10 +212,6 @@ header .dropdown-menu {
     color: #BD71DF !important;
 }
 
-#section-lista li {
-    position: relative;
-}
-
 .list-card {
     width: 90%;
     background-color: rgb(186, 60, 244, 10%);
@@ -223,6 +219,7 @@ header .dropdown-menu {
     gap: 1rem;
     padding: .5rem;
     border-radius: 12px;
+    text-decoration: none;
 }
 
 .list-card-content {
@@ -301,6 +298,7 @@ header .dropdown-menu {
     display: flex;
     justify-content: end;
     height: fit-content;
+    position: relative;
 }
 
 @media (min-width: 450px) {
