@@ -104,18 +104,22 @@ h6 {
   font-weight: bold;
 }
 
-.button {
+.btn {
   background-color: #ba3cf4;
   border-radius: 20px;
   height: 40px;
+  padding: 5px;
+  color: white;
 }
 
 .inicio {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .addLista {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -144,6 +148,7 @@ h6 {
   display: flex;
   gap: 10px;
   margin-bottom: 16px;
+  justify-content: space-between;
 }
 
 .plataformas {
@@ -152,6 +157,7 @@ h6 {
   overflow-x: auto;
   overflow-y: hidden;
   margin-bottom: 16px;
+  justify-content: space-between;
 }
 
 .plataforma {
@@ -182,11 +188,12 @@ h6 {
   border-radius: 20px;
 }
 
-.ator span, small{
+.ator span,
+small {
   display: block;
 }
 
-.ator{
+.ator {
   text-align: center;
 }
 
@@ -235,10 +242,10 @@ h6 {
 }
 
 .fa-ellipsis-vertical {
-  position: absolute; 
-  top: 0;           
+  position: absolute;
+  top: 0;
   right: 0;
-  font-size: 4.5vw;           
+  font-size: 4.5vw;
 }
 
 #reviews {
@@ -318,10 +325,10 @@ h6 {
   border-radius: 10px !important;
 
   float: none !important;
-  position: static !important; 
-  margin: 0 12px 0 0 !important; 
+  position: static !important;
+  margin: 0 12px 0 0 !important;
   order: 0 !important;
-  flex-shrink: 0 !important; 
+  flex-shrink: 0 !important;
   align-self: center !important;
 }
 
@@ -333,7 +340,6 @@ h6 {
   border: none;
 }
 
-
 #tab-episodios .episodio > .done {
   position: absolute !important;
   top: 10px !important;
@@ -343,11 +349,42 @@ h6 {
   object-fit: contain !important;
 }
 
-.titulo{
+.titulo {
   font-weight: bold;
 }
 
-.fa-ellipsis-vertical{
+.fa-ellipsis-vertical {
   justify-content: end;
   text-align: end;
+}
+
+@media (max-width: 387px) {
+  .info span {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 426px) {
+  .btn {
+    background-color: #ba3cf4;
+    border-radius: 20px;
+    height: 40px;
+    padding: 5px;
+    color: white;
+    margin: 15px;
+  }
+
+  .inicio {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .star-review {
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+
+  .avaliacoes h6 {
+    text-align: left !important;
+  }
 }
