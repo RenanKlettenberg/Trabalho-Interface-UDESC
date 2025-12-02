@@ -335,6 +335,12 @@ small {
   z-index: 1;
 }
 
+
+.star-review i:nth-child(5) {
+  color: azure;
+}
+
+
 .episodios {
   background-color: #75303644;
   padding: 10px;
