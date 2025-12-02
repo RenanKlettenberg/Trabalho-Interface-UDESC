@@ -178,7 +178,8 @@ h6 {
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: none;
-  margin: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .ator img {
@@ -198,9 +199,10 @@ small {
 }
 
 .nomeAtor {
-  font-size: 15px;
+  font-size: 14px;
   text-align: center;
   width: 100%;
+  font-weight: bold;
 }
 
 .nomePersonagem {

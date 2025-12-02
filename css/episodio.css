@@ -99,6 +99,9 @@ button {
   margin-top: 5px;
   margin-bottom: 10px;
   padding-bottom: 10px;
+}
+
+.avaliacao .personagens{
   border-bottom: 1px solid rgba(255, 255, 255, 0.459);
 }
 
@@ -126,7 +129,7 @@ small {
 }
 
 .nomeAtor {
-  font-size: 15px;
+  font-size: 14px;
   text-align: center;
   width: 100%;
   font-weight: bold;
@@ -139,6 +142,7 @@ small {
 
 p {
   text-align: justify;
+  margin-bottom: 10px;
 }
 
 .avaliacao {
@@ -405,10 +409,11 @@ h6 {
   margin-bottom: 10px;
 }
 
-.star-review.avaliacaoPropria i {
-  font-size: 40px !important;
-  color: #a1a1a1;
+.star-review i.avaliacaoPropria{
+  font-size: 40px !important; 
+  color: #d8d8d8 !important;
 }
+
 
 .avaliacao button {
   background-image: url("../imgs/comentar.png");

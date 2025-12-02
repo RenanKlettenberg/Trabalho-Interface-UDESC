@@ -37,3 +37,12 @@ function atualizarDoneTemp(temporada) {
     doneTemp.src = "../imgs/done.png";
   }
 }
+
+const episodios = document.querySelectorAll('.episodio');
+
+episodios.forEach(ep => {
+  ep.addEventListener('click', () => {
+    window.location.href = 'episodio.html'; 
+  });
+});
+
