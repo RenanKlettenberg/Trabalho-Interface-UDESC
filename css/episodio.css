@@ -96,7 +96,10 @@ button {
   overflow-y: hidden;
   scroll-behavior: smooth;
   width: 100%;
-  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.459);
 }
 
 .personagens::-webkit-scrollbar {
@@ -149,20 +152,25 @@ p {
   width: 100%; /* importante para que o flex interno funcione */
   box-sizing: border-box; /* evita overflow por padding */
   overflow-x: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.459);
 }
 
 .nota {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.459);
+  width: 100%;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .sentimento {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.459); /* ou center se quiser centralizar */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.459);
+  margin-bottom: 10px;
 }
 
 .emoji {
@@ -194,6 +202,10 @@ p {
   text-align: center;
 }
 
+.avaliacao span {
+  margin-bottom: 5px;
+}
+
 h6 {
   margin-bottom: 20px;
   font-weight: bold;
@@ -214,18 +226,18 @@ h6 {
   height: 50px;
 }
 
-.comentar{
-    background-color: #5f307544;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 20px;
+.comentar {
+  background-color: #5f307544;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
 }
 
-.comentario{
-    background-color: #5f307544;
-    border-radius: 20px;
-    padding: 15px;
-    margin-bottom: 20px;
+.comentario {
+  background-color: #5f307544;
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
 .topo {
@@ -243,11 +255,11 @@ h6 {
 }
 
 .fa-ellipsis-vertical {
-  position: absolute; 
-  top: 0;           
+  position: absolute;
+  top: 0;
   right: 0;
   color: white;
-  font-size: 4.5vw;             
+  font-size: 4.5vw;
 }
 
 .topo img {
@@ -257,71 +269,105 @@ h6 {
   object-fit: cover;
 }
 
-.comentario p{
-    font-size: 15px;
+.star-review i {
+  font-size: 20px !important; /* escolha o tamanho */
+}
+
+.comentario p {
+  font-size: 15px;
 }
 
 .comentario p + img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 16px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 16px;
 }
 
-.interacoes{
+.interacoes {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 
-.likes{
+.likes {
   display: flex;
   flex-direction: row;
   margin: 0px;
   gap: 10px;
 }
 
-.comments{
+.comments {
   display: flex;
   flex-direction: row;
   margin: 0px;
   gap: 10px;
 }
 
-.fa-heart, .fa-message{
+.fa-heart,
+.fa-message {
   color: white;
   font-size: 4.5vw;
   margin: 0px;
 }
 
-.interacoes p{
+.interacoes p {
   margin: 0px;
 }
 
-.comentar{
+.comentar {
   padding: 15px;
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
 
-.comentar span{
+.comentar span {
   padding: 5px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.459);
-  color:  rgba(255, 255, 255, 0.781);
+  color: rgba(255, 255, 255, 0.781);
   font-size: 13px;
+  display: block;
 }
 
-.icones{
+.icones {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.gif-icon {
+  font-size: 11px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: transparent;
+
+  border: 3px solid #fff; /* borda roxa */
+  padding: 0px 2px;
+  width: 27px;
+  height: 25px;
+  border-radius: 5px;
+  margin-top: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-image {
+  font-size: 27px;
   margin-top: 5px;
 }
 
-.iconeGif {
-  height: 22px !important;      /* tamanho que você quiser */
-  width: auto !important;       /* mantém proporção */
-  object-fit: contain !important; /* garante que nada será cortado */
+.meuComentario {
+  width: 100%;
 }
 
+.meuComentario span {
+  width: 100%;
+}
 .comentar img {
   border-radius: 50%;
   width: 40px;
@@ -329,16 +375,56 @@ h6 {
   object-fit: cover;
 }
 
-.acoes{
+.acoes {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.acoes button{
-  background-image:
-    url("../imgs/comentar.png");
-    background-size: contain;    /* mostra 100% da imagem */
-  background-position: center; /* centraliza */
+.acoes button {
+  background-image: url("../imgs/comentar.png");
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
+  width: 80px;
+  height: 40px;
+
+  border: none;
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: 11px;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.box p {
+  margin-bottom: 10px;
+}
+
+.star-review.avaliacaoPropria i {
+  font-size: 40px !important;
+  color: #a1a1a1;
+}
+
+.avaliacao button {
+  background-image: url("../imgs/comentar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 120px;
+  height: 60px;
+
+  border: none;
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: 20px;
+  margin-top: 10px;
 }
