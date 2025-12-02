@@ -94,6 +94,38 @@ button {
 }
 .avaliacoes {
   margin: 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.notaPlataforma{
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 40px) / 3);
+  text-align: center;
+  align-items: center;
+}
+
+i.avaliacao{
+  font-size: 30px !important;
+  margin: 0px;
+}
+
+.notaPlataforma img{
+  width: 33px;
+  margin: 7px;
+}
+
+
+.notaPlataforma h6{
+  height: 40px;
+  text-align: center;
+}
+
+.notaPlataforma p{
+  font-size: 20px;
+  margin-bottom: 0px;
 }
 
 p {
@@ -110,6 +142,8 @@ h6 {
   height: 40px;
   padding: 5px;
   color: white;
+  width: 100%;
+  margin: 15px 0px !important;
 }
 
 .inicio {
@@ -133,7 +167,7 @@ h6 {
   height: 40px;
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.6),
-      /* camada preta transparente */ rgba(0, 0, 0, 0.6)
+      rgba(0, 0, 0, 0.6)
     ),
     var(--img);
   background-size: cover;
@@ -163,7 +197,7 @@ h6 {
 .plataforma {
   width: 70px;
   height: 70px;
-  object-fit: cover; /* NÃO distorce, corta mantendo proporção */
+  object-fit: cover; 
   object-position: center;
   border-radius: 20px;
 }
@@ -291,7 +325,8 @@ small {
   position: absolute;
   bottom: 0.5px;
   right: 5px;
-  margin: 0px;
+  margin-bottom: 8px;
+  margin-right: 5px;
 }
 
 .temporada,
@@ -360,33 +395,26 @@ small {
   text-align: end;
 }
 
+.likes {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.likes p{
+  font-size: 12px;
+}
+
+.bi-chat-square,
+.bi-heart {
+  color: white;
+  font-size: 4.5vw;
+  margin-top: -4px;
+}
+
 @media (max-width: 387px) {
   .info span {
     max-width: 80%;
-  }
-}
-
-@media (max-width: 426px) {
-  .btn {
-    background-color: #ba3cf4;
-    border-radius: 20px;
-    height: 40px;
-    padding: 5px;
-    color: white;
-    margin: 15px;
-  }
-
-  .inicio {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .star-review {
-    justify-content: flex-start !important;
-    text-align: left !important;
-  }
-
-  .avaliacoes h6 {
-    text-align: left !important;
   }
 }

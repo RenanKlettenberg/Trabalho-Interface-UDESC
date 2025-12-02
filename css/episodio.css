@@ -150,11 +150,11 @@ p {
   border-radius: 20px;
   padding: 20px;
   text-align: center;
-  display: flex; /* garante que os filhos sejam flexíveis */
-  flex-direction: column; /* itens um abaixo do outro */
-  align-items: center; /* centraliza horizontalmente */
-  width: 100%; /* importante para que o flex interno funcione */
-  box-sizing: border-box; /* evita overflow por padding */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  width: 100%; 
+  box-sizing: border-box; 
   overflow-x: hidden;
 }
 
@@ -179,15 +179,15 @@ p {
 
 .emoji {
   height: 70px;
-  width: 70px; /* altura fixa para não achatar */
+  width: 70px; 
   background-color: azure;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5px; /* padding interno respeitado */
-  box-sizing: border-box; /* garante que padding não estoure o tamanho */
+  padding: 5px; 
+  box-sizing: border-box; 
   text-align: center;
 }
 
@@ -274,7 +274,7 @@ h6 {
 }
 
 .star-review i {
-  font-size: 20px !important; /* escolha o tamanho */
+  font-size: 20px !important; 
 }
 
 .comentario p {
@@ -301,6 +301,14 @@ h6 {
   gap: 10px;
 }
 
+.likes p{
+  font-size: 12px;
+}
+
+.comments p{
+  font-size: 12px;
+}
+
 .comments {
   display: flex;
   flex-direction: row;
@@ -308,11 +316,11 @@ h6 {
   gap: 10px;
 }
 
-.fa-heart,
-.fa-message {
+.bi-chat-square,
+.bi-heart {
   color: white;
   font-size: 4.5vw;
-  margin: 0px;
+  margin-top: -4px;
 }
 
 .interacoes p {
@@ -348,7 +356,7 @@ h6 {
   color: white;
   background-color: transparent;
 
-  border: 3px solid #fff; /* borda roxa */
+  border: 3px solid #fff; 
   padding: 0px 2px;
   width: 27px;
   height: 25px;
@@ -411,7 +419,7 @@ h6 {
 
 .star-review i.avaliacaoPropria{
   font-size: 40px !important; 
-  color: #d8d8d8 !important;
+  color: azure !important;
 }
 
 
@@ -432,4 +440,12 @@ h6 {
 
   padding-bottom: 20px;
   margin-top: 10px;
+}
+
+.desejaComentar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }

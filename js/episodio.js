@@ -20,7 +20,7 @@ doneEp.addEventListener("click", () => {
     });
 
     stars.forEach((star) => {
-      star.style.setProperty("color", "#d8d8d8", "important");
+      star.style.setProperty("color", "azure", "important");
     });
 
     avaliacao.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -28,13 +28,11 @@ doneEp.addEventListener("click", () => {
     doneEp.src = "../imgs/done.png";
     avaliacao.style.display = "none";
 
-    // Reset de estrelas e nota
     notaAtual = 0;
     stars.forEach((star) => {
-      star.style.setProperty("color", "#d8d8d8", "important");
+      star.style.setProperty("color", "azure", "important");
     });
 
-    // Reset de personagens e caixas
     personagens.forEach((personagem) => {
       const img = personagem.querySelector("img");
       if (img) img.style.border = "none";
@@ -51,6 +49,12 @@ doneEp.addEventListener("click", () => {
 personagens.forEach((personagemFav) => {
   personagemFav.addEventListener("click", () => {
     const img = personagemFav.querySelector("img");
+    personagens.forEach((p) => {
+      const outraImg = p.querySelector("img");
+      if (outraImg && outraImg !== img) {
+        outraImg.style.border = "none";
+      }
+    });
     if (img.style.border == "none" || img.style.border == "") {
       if (!img.closest(".informacoes")) {
         img.style.border = "#BA3CF4 solid 3px";
@@ -60,6 +64,7 @@ personagens.forEach((personagemFav) => {
     }
   });
 });
+
 
 caixas.forEach((sentimento) => {
   sentimento.addEventListener("click", () => {
@@ -72,7 +77,7 @@ caixas.forEach((sentimento) => {
   });
 });
 
-const likes = document.querySelectorAll(".fa-heart");
+const likes = document.querySelectorAll(".bi-heart");
 
 likes.forEach((like) => {
   like.addEventListener("click", () => {
@@ -98,7 +103,7 @@ stars.forEach((star, index) => {
       if (i < notaAtual) {
         s.style.setProperty("color", "#ba3cf4", "important");
       } else {
-        s.style.setProperty("color", "#d8d8d8", "important");
+        s.style.setProperty("color", "azure", "important");
       }
     });
   });
